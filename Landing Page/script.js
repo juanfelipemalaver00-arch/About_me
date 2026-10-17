@@ -1,13 +1,12 @@
 /**
  * Juan Felipe Malaver O. - Personal Landing Page
- * Interactive Logic: Periodic Table Engine, Canvas Constellation, Timeline, A11y
+ * Interactive Logic: Periodic Table Engine, Sky Blue Canvas Constellation, Timeline Accordion
  */
 
 (function () {
   'use strict';
 
   // --- 1. PERIODIC TABLE CAPABILITIES DATA REGISTRY ---
-  // All details strictly grounded in verified CV facts & competencies
   const capabilitiesData = {
     'aa-1': {
       number: '01',
@@ -239,7 +238,6 @@
 
       inspectorNumber.textContent = data.number;
       inspectorSymbol.textContent = data.symbol;
-      inspectorSymbol.className = `inspector-symbol ${data.catClass}`;
       inspectorFamily.textContent = data.family;
       inspectorName.textContent = data.name;
       inspectorApp.textContent = data.app;
@@ -256,15 +254,10 @@
       });
     }
 
-    // Attach events to cells
     cells.forEach(cell => {
       const id = cell.getAttribute('data-id');
-
-      // Mouse hover & click
       cell.addEventListener('mouseenter', () => updateInspector(id));
       cell.addEventListener('click', () => updateInspector(id));
-
-      // Keyboard navigation (Tab & Enter/Space)
       cell.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -273,7 +266,6 @@
       });
     });
 
-    // Category Filter Buttons
     filterTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const filter = tab.getAttribute('data-filter');
@@ -302,7 +294,7 @@
       });
     });
 
-    // Initial state: select Causal Inference (aa-6)
+    // Default active item: Causal Inference (aa-6)
     updateInspector('aa-6');
   }
 
@@ -331,12 +323,11 @@
     });
   }
 
-  // --- 4. SUBTLE ANALYTICAL NETWORK CANVAS ---
+  // --- 4. SUBTLE SKY-BLUE CANVAS CONSTELLATION ON WHITE ---
   function initCanvas() {
     const canvas = document.getElementById('analytical-canvas');
     if (!canvas) return;
 
-    // Check prefers-reduced-motion
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
     }
@@ -344,10 +335,10 @@
     const ctx = canvas.getContext('2d');
     let width, height;
     let particles = [];
-    const particleCount = 42;
-    const maxDistance = 140;
+    const particleCount = 40;
+    const maxDistance = 135;
 
-    let mouse = { x: null, y: null, maxRadius: 120 };
+    let mouse = { x: null, y: null, maxRadius: 110 };
 
     function resize() {
       width = canvas.width = window.innerWidth;
@@ -367,13 +358,12 @@
       mouse.y = null;
     });
 
-    // Particle class
     class Particle {
       constructor() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.45;
-        this.vy = (Math.random() - 0.5) * 0.45;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
         this.radius = Math.random() * 1.5 + 1.2;
       }
 
@@ -390,7 +380,8 @@
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(56, 189, 248, 0.45)';
+        // Sky Blue particle on white background
+        ctx.fillStyle = 'rgba(14, 165, 233, 0.45)';
         ctx.fill();
       }
     }
@@ -399,12 +390,9 @@
       particles.push(new Particle());
     }
 
-    let animationFrameId;
-
     function animate() {
       ctx.clearRect(0, 0, width, height);
 
-      // Connect nearby particles
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
@@ -415,34 +403,34 @@
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < maxDistance) {
-            const alpha = (1 - dist / maxDistance) * 0.16;
+            const alpha = (1 - dist / maxDistance) * 0.18;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(37, 99, 235, ${alpha})`;
+            // Subtle sky blue connecting lines
+            ctx.strokeStyle = `rgba(2, 132, 199, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
         }
 
-        // Connect to mouse if nearby
         if (mouse.x !== null && mouse.y !== null) {
           const mdx = particles[i].x - mouse.x;
           const mdy = particles[i].y - mouse.y;
           const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
           if (mdist < mouse.maxRadius) {
-            const malpha = (1 - mdist / mouse.maxRadius) * 0.28;
+            const malpha = (1 - mdist / mouse.maxRadius) * 0.35;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(56, 189, 248, ${malpha})`;
+            ctx.strokeStyle = `rgba(14, 165, 233, ${malpha})`;
             ctx.lineWidth = 1.2;
             ctx.stroke();
           }
         }
       }
 
-      animationFrameId = requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
     }
 
     animate();
@@ -461,7 +449,6 @@
         mainNav.classList.toggle('is-open');
       });
 
-      // Close menu on link click
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
           mainNav.classList.remove('is-open');
@@ -470,7 +457,6 @@
       });
     }
 
-    // Active link spy using Intersection Observer
     const sections = document.querySelectorAll('section[id], footer[id]');
     const observer = new IntersectionObserver(
       (entries) => {
@@ -493,7 +479,7 @@
     sections.forEach((s) => observer.observe(s));
   }
 
-  // --- 6. TOAST NOTIFICATIONS & CV DOWNLOAD CONFIRMATION ---
+  // --- 6. TOAST NOTIFICATIONS ---
   function initToast() {
     const toast = document.getElementById('toast');
     if (!toast) return;
@@ -508,7 +494,6 @@
       }, 3500);
     }
 
-    // CV Download buttons
     const cvButtons = document.querySelectorAll('a[download]');
     cvButtons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -517,7 +502,6 @@
     });
   }
 
-  // Initialize all modules on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
     initPeriodicTable();
     initTimeline();
