@@ -72,8 +72,30 @@
   <!-- Subtle Sky-Blue Analytical Canvas on White -->
   <canvas id="analytical-canvas" aria-hidden="true"></canvas>
 
+  <!-- IMMERSIVE CINEMATIC INTRO STAGE WITH THREE.JS PHYSICS -->
+  <div class="intro-stage" id="intro-stage" aria-label="Interactive Introduction">
+    <div class="intro-viewport" id="intro-viewport">
+      <!-- Full-screen Three.js Interactive Physics Canvas -->
+      <div class="intro-three-container" id="intro-three-container"></div>
+
+      <!-- Phased Typographic Overlay: Juan Felipe Malaver O. & Thanks for your interest -->
+      <div class="intro-overlay-text" id="intro-overlay-text" aria-hidden="true">
+        <h1 class="intro-name">Juan Felipe Malaver O.</h1>
+        <p class="intro-thanks">Thanks for your interest</p>
+      </div>
+
+      <!-- Subtle Scroll Prompt -->
+      <div class="intro-scroll-hint" id="intro-scroll-hint" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div>
+
   <!-- Clean Header: Sections Menu Only -->
-  <header class="site-header" id="header">
+  <header class="site-header header-intro-hidden" id="site-header">
     <div class="header-container">
       <nav class="main-nav" id="main-nav" aria-label="Sections Navigation">
         <ul class="nav-list">
@@ -107,32 +129,28 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <!-- HERO SECTION WITH ENTRANCE FADE & 3D INTERACTIVE PHYSICS -->
+  <main id="main-content" class="main-landing-content">
+    <!-- HERO SECTION WITH EDITORIAL PORTRAIT & VALUE PROPOSITION -->
     <section class="hero-section" id="hero" aria-labelledby="hero-name-id">
       <div class="section-container hero-container">
         
         <!-- Left Column: Editorial & Value Proposition -->
         <div class="hero-content">
-          <div class="hero-kicker-pill anim-fade-up anim-delay-1">
-            <span>Quantitative Rigor · Commercial Strategy · Measurable Growth</span>
-          </div>
-
-          <div class="hero-title anim-fade-up anim-delay-2">
+          <div class="hero-title anim-fade-up anim-delay-1">
             <h1 class="hero-name" id="hero-name-id">Juan Felipe Malaver O.</h1>
             <h2 class="hero-role">Data Analytics &amp; Business Strategy Consultant</h2>
           </div>
 
-          <p class="hero-value-prop anim-fade-up anim-delay-3">
+          <p class="hero-value-prop anim-fade-up anim-delay-2">
             &ldquo;I bridge business strategy and advanced analytics, helping organizations turn complex data into decisions, clear business strategies, and measurable growth.&rdquo;
           </p>
 
-          <p class="hero-narrative anim-fade-up anim-delay-4">
+          <p class="hero-narrative anim-fade-up anim-delay-3">
             Specializing in quantitative modeling, causal inference, and machine learning to optimize revenue, reduce rejection rates, and build evidence-backed commercial strategies for leading financial institutions across LATAM.
           </p>
 
           <!-- Tactile Pill Action Buttons -->
-          <div class="hero-cta-cluster anim-fade-up anim-delay-5" role="group" aria-label="Key Actions">
+          <div class="hero-cta-cluster anim-fade-up anim-delay-4" role="group" aria-label="Key Actions">
             <!-- Download CV -->
             <a href="./01_Juan_Felipe_Malaver_CV_EN.pdf" download="Juan_Felipe_Malaver_CV.pdf" class="btn-pill btn-pill-primary" id="hero-download-cv">
               <span class="btn-pill-icon">
@@ -178,24 +196,10 @@
           </div>
         </div>
 
-        <!-- Right Column: Pure Circular Photo & 3D Interactive Physics Widget -->
-        <div class="hero-visual anim-fade-up anim-delay-3">
-          <div class="hero-media-stack">
-            <!-- Pure Circular Photo (No outline, no buttons) -->
-            <div class="portrait-circle">
-              <img src="./Foto%20formal.jpg" alt="Juan Felipe Malaver O." class="portrait-img" loading="eager" width="280" height="280">
-            </div>
-
-            <!-- 3D Interactive Analytical Physics Sculpture -->
-            <div class="interactive-3d-card" id="interactive-3d-card">
-              <div class="interactive-3d-canvas-wrap" id="three-canvas-container">
-                <!-- Three.js Canvas injected dynamically via script.js -->
-              </div>
-              <div class="interactive-3d-badge">
-                <span class="badge-live-dot"></span>
-                <span>3D Physics Model · Drag to Rotate · Hover to Displace</span>
-              </div>
-            </div>
+        <!-- Right Column: Pure Circular Photo -->
+        <div class="hero-visual anim-fade-up anim-delay-2">
+          <div class="portrait-circle">
+            <img src="./Foto%20formal.jpg" alt="Juan Felipe Malaver O." class="portrait-img" loading="eager" width="290" height="290">
           </div>
         </div>
       </div>
@@ -990,8 +994,8 @@
               <!-- LSE -->
               <div class="credential-card">
                 <div class="credential-header-row">
-                  <div class="edu-logo-frame">
-                    <img src="./Logos/LSE.png" alt="London School of Economics" class="edu-logo-img">
+                  <div class="edu-logo-frame lse-frame">
+                    <img src="./Logos/LSE.png" alt="London School of Economics" class="edu-logo-img lse-logo">
                   </div>
                   <span class="credential-period">January 2021 – October 2025</span>
                 </div>

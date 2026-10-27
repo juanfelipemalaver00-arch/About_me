@@ -375,7 +375,7 @@
 
   // --- 3. 3D INTERACTIVE ANALYTICAL PHYSICS SCULPTURE (THREE.JS) ---
   function initThreeJsPhysics() {
-    const container = document.getElementById('three-canvas-container');
+    const container = document.getElementById('intro-three-container');
     if (!container || typeof THREE === 'undefined') return;
 
     // Check prefers-reduced-motion
@@ -383,13 +383,13 @@
       return;
     }
 
-    const width = container.clientWidth || 340;
-    const height = container.clientHeight || 240;
+    const width = container.clientWidth || window.innerWidth;
+    const height = container.clientHeight || window.innerHeight;
 
     // Scene & Camera
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(48, width / height, 0.1, 1000);
-    camera.position.z = 8.5;
+    const camera = new THREE.PerspectiveCamera(46, width / height, 0.1, 1000);
+    camera.position.z = 8.8;
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -861,10 +861,116 @@
     });
   }
 
+  // --- 8. INTRO SCROLL EXPERIENCE (GRADUAL INTRO) ---
+  function initIntroScroll() {
+    const stage = document.getElementById('intro-stage');
+    const overlayText = document.getElementById('intro-overlay-text');
+    const scrollHint = document.getElementById('intro-scroll-hint');
+    const viewport = document.getElementById('intro-viewport');
+    const header = document.getElementById('site-header') || document.getElementById('header');
+    const mainContent = document.getElementById('main-content');
+
+    if (!stage || !overlayText || !viewport) return;
+
+    function onScroll() {
+      const rect = stage.getBoundingClientRect();
+      const scrollDist = stage.offsetHeight - window.innerHeight;
+      if (scrollDist <= 0) return;
+
+      // Progress: 0.0 at very top, 1.0 when exiting intro stage
+      const progress = Math.min(Math.max(-rect.top / scrollDist, 0), 1);
+
+      // 1. Scroll hint prompt fades out rapidly once user initiates scroll
+      if (scrollHint) {
+        scrollHint.style.opacity = progress > 0.05 ? '0' : '1';
+      }
+
+      // 2. Phased Text Overlay:
+      // 0.0 - 0.18: Completely invisible (only interactive physics model floating in white space)
+      // 0.18 - 0.58: Smooth fade-in & ascent of Juan Felipe Malaver O. & Thanks for your interest
+      // 0.58 - 0.78: Full prominent visibility
+      // 0.78 - 1.00: Fade-out as stage dissolves into main landing page
+      if (progress < 0.18) {
+        overlayText.style.opacity = '0';
+        overlayText.style.transform = 'translateY(24px)';
+      } else if (progress <= 0.58) {
+        const p = (progress - 0.18) / 0.40;
+        const clampedP = Math.min(Math.max(p, 0), 1);
+        overlayText.style.opacity = clampedP.toFixed(3);
+        overlayText.style.transform = `translateY(${(24 * (1 - clampedP)).toFixed(1)}px)`;
+      } else if (progress <= 0.78) {
+        overlayText.style.opacity = '1';
+        overlayText.style.transform = 'translateY(0px)';
+      } else {
+        const pOut = (progress - 0.78) / 0.22;
+        overlayText.style.opacity = Math.max(1 - pOut, 0).toFixed(3);
+        overlayText.style.transform = `translateY(${(-16 * pOut).toFixed(1)}px)`;
+      }
+
+      // 3. Stage Viewport Dissolve & Main Content Gradual Fade-in
+      if (progress > 0.72) {
+        const pTransition = (progress - 0.72) / 0.28;
+        viewport.style.opacity = Math.max(1 - pTransition, 0).toFixed(3);
+        if (mainContent) {
+          mainContent.style.opacity = Math.min(pTransition * 1.35, 1).toFixed(3);
+        }
+      } else {
+        viewport.style.opacity = '1';
+        if (mainContent) {
+          mainContent.style.opacity = '0';
+        }
+      }
+
+      // 4. Site Header visibility
+      if (header) {
+        if (progress >= 0.82) {
+          header.classList.add('header-visible');
+          header.classList.remove('header-intro-hidden');
+        } else {
+          header.classList.remove('header-visible');
+          header.classList.add('header-intro-hidden');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // --- 9. TIMELINE SCROLL ANIMATION (RIGHT-TO-LEFT SLIDE-IN) ---
+  function initExperienceScrollObserver() {
+    const items = document.querySelectorAll('.timeline-item');
+    if (!items.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      items.forEach(item => item.classList.add('is-inview'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-inview');
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    items.forEach((item, index) => {
+      item.style.transitionDelay = `${(index % 3) * 0.12}s`;
+      observer.observe(item);
+    });
+  }
+
   // Run initializers on DOM Ready
   document.addEventListener('DOMContentLoaded', () => {
     initPeriodicTable();
     initThreeJsPhysics();
+    initIntroScroll();
+    initExperienceScrollObserver();
     initTimeline();
     initCanvas();
     initNavigation();
