@@ -948,6 +948,7 @@
       return;
     }
 
+    // Trigger when the item's centre crosses the viewport's centre
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -956,13 +957,35 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
     );
 
     items.forEach((item, index) => {
-      item.style.transitionDelay = `${(index % 3) * 0.12}s`;
+      item.style.transitionDelay = `${(index % 3) * 0.1}s`;
       observer.observe(item);
     });
+  }
+
+  // --- 10. FADE-SECTION OBSERVER (medium-speed fade between page phases) ---
+  function initFadeSectionObserver() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.fade-section').forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // fire once
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
   }
 
   // Run initializers on DOM Ready
@@ -971,6 +994,7 @@
     initThreeJsPhysics();
     initIntroScroll();
     initExperienceScrollObserver();
+    initFadeSectionObserver();
     initTimeline();
     initCanvas();
     initNavigation();

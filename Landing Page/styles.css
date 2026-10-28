@@ -290,10 +290,11 @@ button {
 /* --- IMMERSIVE CINEMATIC INTRO STAGE (THREE.JS PHYSICS) --- */
 .intro-stage {
   position: relative;
-  height: 250vh; /* Slow, gradual scroll experience */
+  height: 150vh; /* Slightly shorter intro scroll distance */
   background: #FFFFFF;
   z-index: 40;
 }
+
 
 .intro-viewport {
   position: sticky;
@@ -373,12 +374,24 @@ button {
   50% { transform: translate(-50%, 6px); }
 }
 
-/* --- MAIN CONTENT TRANSITION --- */
+/* --- MAIN CONTENT & MEDIUM-SPEED SECTION FADE TRANSITIONS --- */
 .main-landing-content {
   position: relative;
   background: #FFFFFF;
   z-index: 20;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.45s ease;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* --- HEADER & NAVIGATION --- */
@@ -664,7 +677,7 @@ button {
   margin-bottom: 2.5rem;
   opacity: 0;
   transform: translateX(75px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1), transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
 }
 
@@ -1347,13 +1360,13 @@ button {
 }
 
 .edu-logo-frame.lse-frame {
-  height: 64px;
-  max-width: 160px;
+  height: 90px;
+  max-width: 180px;
 }
 
 .edu-logo-img.lse-logo {
-  max-height: 60px;
-  max-width: 150px;
+  max-height: 86px;
+  max-width: 170px;
   object-fit: contain;
 }
 
@@ -1682,6 +1695,21 @@ button {
     width: fit-content;
     padding: 0.2rem 0.6rem;
   }
+}
+
+/* --- FADE-SECTION UTILITY (scroll-triggered fade between page phases) --- */
+.fade-section {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
