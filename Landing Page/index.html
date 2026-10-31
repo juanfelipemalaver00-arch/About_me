@@ -78,6 +78,9 @@
       <!-- Full-screen Three.js Interactive Physics Canvas -->
       <div class="intro-three-container" id="intro-three-container"></div>
 
+      <!-- Floating Horizontal Skills Cloud Layer with Dynamic Opacities -->
+      <div class="intro-floating-skills" id="intro-floating-skills" aria-hidden="true"></div>
+
       <!-- Phased Typographic Overlay: Juan Felipe Malaver O. & Thanks for your interest -->
       <div class="intro-overlay-text" id="intro-overlay-text" aria-hidden="true">
         <h1 class="intro-name">Juan Felipe Malaver O.</h1>
@@ -227,9 +230,9 @@
     </section>
 
     <!-- PROFESSIONAL EXPERIENCE SECTION -->
-    <section class="section experience-section fade-section" id="experience" aria-labelledby="experience-title">
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
       <div class="section-container">
-        <div class="section-header">
+        <div class="section-header fade-section">
           <div class="section-kicker">Track Record &amp; Leadership</div>
           <h2 class="section-title" id="experience-title">Professional Experience</h2>
           <p class="section-subtitle">
@@ -237,7 +240,7 @@
           </p>
         </div>
 
-        <div class="timeline-container">
+        <div class="timeline-container fade-section" style="transition-delay:0.15s">
           <div class="timeline-track" aria-hidden="true"></div>
 
           <!-- Mastercard: Associate Analytics Consultant -->
@@ -290,7 +293,7 @@
             </div>
           </article>
 
-          <!-- Mastercard: Associate Consultant I -->
+          <!-- Mastercard: Associate Consultant Intern -->
           <article class="timeline-item" data-timeline-id="exp-2">
             <div class="timeline-node" aria-hidden="true">
               <span class="node-inner"></span>
@@ -308,7 +311,7 @@
                 </div>
               </div>
 
-              <h3 class="timeline-role">Associate Consultant I</h3>
+              <h3 class="timeline-role">Associate Consultant Intern</h3>
               <p class="timeline-summary">
                 Engineered commercial projection, propensity, and scoring models to optimize mass marketing campaigns across Latin American banking clients.
               </p>
@@ -438,9 +441,9 @@
     </section>
 
     <!-- PERIODIC TABLE OF CAPABILITIES (27 3D FUTURISTIC BUTTONS ACROSS 4 CORE CATEGORIES) -->
-    <section class="section capabilities-section fade-section" id="capabilities" aria-labelledby="capabilities-title">
+    <section class="section capabilities-section" id="capabilities" aria-labelledby="capabilities-title">
       <div class="section-container">
-        <div class="section-header">
+        <div class="section-header fade-section">
           <div class="section-kicker">Analytical Framework</div>
           <h2 class="section-title" id="capabilities-title">How I Create Business Impact</h2>
           <p class="section-subtitle">
@@ -449,298 +452,495 @@
         </div>
 
         <!-- Category Filter Tabs -->
-        <div class="capabilities-nav" role="tablist" aria-label="Filter capabilities by family">
-          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Elements (27)</button>
-          <button class="filter-tab" data-filter="ad" role="tab" aria-selected="false">
-            <span class="tab-indicator cat-ad-bg"></span> Analytics &amp; Data (12)
+        <div class="capabilities-nav fade-section" style="transition-delay:0.12s" role="tablist" aria-label="Filter capabilities by family">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Elements (52)</button>
+          <button class="filter-tab" data-filter="lang" role="tab" aria-selected="false">
+            <span class="tab-indicator cat-lang-bg"></span> Languages (4)
           </button>
-          <button class="filter-tab" data-filter="bc" role="tab" aria-selected="false">
-            <span class="tab-indicator cat-bc-bg"></span> Business Strategy &amp; Consulting (5)
+          <button class="filter-tab" data-filter="gda" role="tab" aria-selected="false">
+            <span class="tab-indicator cat-gda-bg"></span> General Data Analysis (13)
           </button>
-          <button class="filter-tab" data-filter="de" role="tab" aria-selected="false">
-            <span class="tab-indicator cat-de-bg"></span> Data Engineering (5)
+          <button class="filter-tab" data-filter="mlds" role="tab" aria-selected="false">
+            <span class="tab-indicator cat-mlds-bg"></span> ML &amp; Data Science (9)
           </button>
-          <button class="filter-tab" data-filter="le" role="tab" aria-selected="false">
-            <span class="tab-indicator cat-le-bg"></span> Leadership &amp; EQ (5)
+          <button class="filter-tab" data-filter="tool" role="tab" aria-selected="false">
+            <span class="tab-indicator cat-tool-bg"></span> Stack &amp; Tools (18)
+          </button>
+          <button class="filter-tab" data-filter="biz" role="tab" aria-selected="false">
+            <span class="tab-indicator cat-biz-bg"></span> Consulting &amp; Business (8)
           </button>
         </div>
 
-        <div class="periodic-layout">
+        <div class="periodic-layout fade-section" style="transition-delay:0.25s">
           <!-- 3D Futuristic Modular Button Grid -->
           <div class="periodic-grid" id="periodic-table" role="region" aria-label="3D Capabilities Grid">
-            
-            <!-- Category 1: Analytics & Data (AD - 12 elements) -->
-            <button class="pt-cell cat-ad" data-id="ad-1" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-lang" data-id="lang-1" data-cat="lang" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">01</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Arm</span>
-              <span class="pt-name">Association Rule Mining</span>
+              <span class="pt-symbol">Py</span>
+              <span class="pt-name">Python</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-2" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-lang" data-id="lang-2" data-cat="lang" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">02</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Apr</span>
-              <span class="pt-name">Apriori Algorithm</span>
+              <span class="pt-symbol">Sql</span>
+              <span class="pt-name">SQL - MySQL</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-3" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-lang" data-id="lang-3" data-cat="lang" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">03</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Ssa</span>
-              <span class="pt-name">Sequential Pattern Analysis</span>
+              <span class="pt-symbol">R</span>
+              <span class="pt-name">R</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-4" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-lang" data-id="lang-4" data-cat="lang" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">04</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Pm</span>
-              <span class="pt-name">Predictive Modeling</span>
+              <span class="pt-symbol">Tex</span>
+              <span class="pt-name">LaTeX</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-5" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-1" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">05</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Cl</span>
-              <span class="pt-name">Clustering (K-Medoids / Gower)</span>
+              <span class="pt-symbol">Dg</span>
+              <span class="pt-name">Data Governance</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-6" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-2" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">06</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Ml</span>
-              <span class="pt-name">Applied Machine Learning</span>
+              <span class="pt-symbol">Gdp</span>
+              <span class="pt-name">GDPR (PII Protection)</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-7" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-gda is-active" data-id="gda-3" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">07</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Ec</span>
-              <span class="pt-name">Advanced Econometrics</span>
+              <span class="pt-symbol">Ci</span>
+              <span class="pt-name">Causal Inference</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-8" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-4" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">08</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Py</span>
-              <span class="pt-name">Python DS &amp; ML</span>
+              <span class="pt-symbol">Ab</span>
+              <span class="pt-name">A/B Testing</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-9" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-5" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">09</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">R</span>
-              <span class="pt-name">R Spatial &amp; Time Series</span>
+              <span class="pt-symbol">Ecm</span>
+              <span class="pt-name">Advanced Econometrics</span>
             </button>
-
-            <button class="pt-cell cat-ad is-active" data-id="ad-10" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-6" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">10</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Ci</span>
-              <span class="pt-name">Causal Inference</span>
+              <span class="pt-symbol">Psm</span>
+              <span class="pt-name">Propensity Score Matching</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-11" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-7" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">11</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Rfm</span>
-              <span class="pt-name">RFM Customer Models</span>
+              <span class="pt-symbol">Exp</span>
+              <span class="pt-name">Experiments Design</span>
             </button>
-
-            <button class="pt-cell cat-ad" data-id="ad-12" data-cat="ad" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-8" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">12</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Bi</span>
-              <span class="pt-name">Business Intelligence</span>
+              <span class="pt-symbol">Did</span>
+              <span class="pt-name">Diff-in-Diff (Callaway &amp; S.)</span>
             </button>
-
-            <!-- Category 2: Business Strategy & Consulting (BC - 5 elements) -->
-            <button class="pt-cell cat-bc" data-id="bc-1" data-cat="bc" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-9" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">13</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Cs</span>
-              <span class="pt-name">Strategic Consulting</span>
+              <span class="pt-symbol">Seq</span>
+              <span class="pt-name">Sequential Patterns (Cross-Sale)</span>
             </button>
-
-            <button class="pt-cell cat-bc" data-id="bc-2" data-cat="bc" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-10" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">14</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Bt</span>
-              <span class="pt-name">Analytics Business Translation</span>
+              <span class="pt-symbol">Rfm</span>
+              <span class="pt-name">RFM Customer Models</span>
             </button>
-
-            <button class="pt-cell cat-bc" data-id="bc-3" data-cat="bc" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-11" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">15</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Co</span>
-              <span class="pt-name">Campaign &amp; Margin Optimization</span>
+              <span class="pt-symbol">Gis</span>
+              <span class="pt-name">Spatial Analysis (Shapefiles/Rasters)</span>
             </button>
-
-            <button class="pt-cell cat-bc" data-id="bc-4" data-cat="bc" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-12" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">16</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Di</span>
-              <span class="pt-name">Interactive Business Studios</span>
+              <span class="pt-symbol">Ts</span>
+              <span class="pt-name">Time Series Analysis</span>
             </button>
-
-            <button class="pt-cell cat-bc" data-id="bc-5" data-cat="bc" tabindex="0">
+            <button class="pt-cell cat-gda" data-id="gda-13" data-cat="gda" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">17</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Cc</span>
-              <span class="pt-name">Case Resolution (Mastercard/BCG)</span>
+              <span class="pt-symbol">Pca</span>
+              <span class="pt-name">PCA Analysis</span>
             </button>
-
-            <!-- Category 3: Data Engineering (DE - 5 elements) -->
-            <button class="pt-cell cat-de" data-id="de-1" data-cat="de" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-1" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">18</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Etl</span>
-              <span class="pt-name">ETL Pipelines (Python/SQL)</span>
+              <span class="pt-symbol">Mls</span>
+              <span class="pt-name">Python (Scikit, PyTorch, PySpark)</span>
             </button>
-
-            <button class="pt-cell cat-de" data-id="de-2" data-cat="de" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-2" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">19</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Sql</span>
-              <span class="pt-name">Advanced SQL &amp; Big Data</span>
+              <span class="pt-symbol">Etl</span>
+              <span class="pt-name">ETL Pipelines</span>
             </button>
-
-            <button class="pt-cell cat-de" data-id="de-3" data-cat="de" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-3" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">20</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Aws</span>
-              <span class="pt-name">Cloud Computing &amp; AWS</span>
+              <span class="pt-symbol">Mla</span>
+              <span class="pt-name">Clustering &amp; Ensembles (K-Medoids, XGB)</span>
             </button>
-
-            <button class="pt-cell cat-de" data-id="de-4" data-cat="de" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-4" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">21</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Ing</span>
-              <span class="pt-name">Ingestion Platforms</span>
+              <span class="pt-symbol">Arm</span>
+              <span class="pt-name">ARM &amp; Apriori (Cross-Sale)</span>
             </button>
-
-            <button class="pt-cell cat-de" data-id="de-5" data-cat="de" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-5" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">22</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Dq</span>
-              <span class="pt-name">Data Governance &amp; Quality</span>
+              <span class="pt-symbol">Mcp</span>
+              <span class="pt-name">Model Context Protocol (MCP)</span>
             </button>
-
-            <!-- Category 4: Leadership & EQ (LE - 5 elements) -->
-            <button class="pt-cell cat-le" data-id="le-1" data-cat="le" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-6" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">23</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Lp</span>
-              <span class="pt-name">High-Impact Project Leadership</span>
+              <span class="pt-symbol">Agy</span>
+              <span class="pt-name">Claude Code, Codex &amp; Antigravity</span>
             </button>
-
-            <button class="pt-cell cat-le" data-id="le-2" data-cat="le" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-7" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">24</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Li</span>
-              <span class="pt-name">Institutional Leadership (LSE)</span>
+              <span class="pt-symbol">Agt</span>
+              <span class="pt-name">Sub-Agent Teams &amp; Custom Skills</span>
             </button>
-
-            <button class="pt-cell cat-le" data-id="le-3" data-cat="le" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-8" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">25</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Me</span>
-              <span class="pt-name">Mentorship &amp; Communication</span>
+              <span class="pt-symbol">Prm</span>
+              <span class="pt-name">Prompt Engineering</span>
             </button>
-
-            <button class="pt-cell cat-le" data-id="le-4" data-cat="le" tabindex="0">
+            <button class="pt-cell cat-mlds" data-id="mlds-9" data-cat="mlds" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">26</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Cr</span>
-              <span class="pt-name">Global Research Coordination</span>
+              <span class="pt-symbol">Crw</span>
+              <span class="pt-name">CrewAI Multi-Agent Systems</span>
             </button>
-
-            <button class="pt-cell cat-le" data-id="le-5" data-cat="le" tabindex="0">
+            <button class="pt-cell cat-tool" data-id="tool-1" data-cat="tool" tabindex="0">
               <span class="pt-glare"></span>
               <div class="pt-cell-top">
                 <span class="pt-number">27</span>
                 <span class="pt-pip"></span>
               </div>
-              <span class="pt-symbol">Gt</span>
-              <span class="pt-name">High-Pressure Team Management</span>
+              <span class="pt-symbol">Aws</span>
+              <span class="pt-name">AWS Cloud Ecosystem</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-2" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">28</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Glu</span>
+              <span class="pt-name">AWS Glue</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-3" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">29</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Wrn</span>
+              <span class="pt-name">AWS Data Wrangler</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-4" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">30</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Stp</span>
+              <span class="pt-name">AWS Step Functions</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-5" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">31</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">S3</span>
+              <span class="pt-name">AWS S3 Data Lake</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-6" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">32</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Put</span>
+              <span class="pt-name">PuTTY &amp; WinSCP</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-7" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">33</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Dbr</span>
+              <span class="pt-name">Databricks</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-8" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">34</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Dku</span>
+              <span class="pt-name">Dataiku DSS</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-9" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">35</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Knm</span>
+              <span class="pt-name">KNIME Analytics</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-10" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">36</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Pbi</span>
+              <span class="pt-name">Power BI</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-11" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">37</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Tab</span>
+              <span class="pt-name">Tableau</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-12" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">38</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Spk</span>
+              <span class="pt-name">Hadoop &amp; Apache Spark</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-13" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">39</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Stl</span>
+              <span class="pt-name">Streamlit Web Apps</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-14" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">40</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Vrc</span>
+              <span class="pt-name">Vercel Deployment</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-15" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">41</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Xls</span>
+              <span class="pt-name">Excel Macros &amp; Modeling</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-16" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">42</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Pqw</span>
+              <span class="pt-name">Power Query &amp; Power Pivot</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-17" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">43</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Ide</span>
+              <span class="pt-name">VS Code &amp; Jupyter</span>
+            </button>
+            <button class="pt-cell cat-tool" data-id="tool-18" data-cat="tool" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">44</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Imp</span>
+              <span class="pt-name">Apache Impala</span>
+            </button>
+            <button class="pt-cell cat-biz" data-id="biz-1" data-cat="biz" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">45</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Cst</span>
+              <span class="pt-name">Strategic Consulting</span>
+            </button>
+            <button class="pt-cell cat-biz" data-id="biz-2" data-cat="biz" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">46</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Exc</span>
+              <span class="pt-name">Executive Communication</span>
+            </button>
+            <button class="pt-cell cat-biz" data-id="biz-3" data-cat="biz" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">47</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Skm</span>
+              <span class="pt-name">Stakeholders Management</span>
+            </button>
+            <button class="pt-cell cat-biz" data-id="biz-4" data-cat="biz" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">48</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Aig</span>
+              <span class="pt-name">AI Governance, Risk &amp; Ethics</span>
+            </button>
+            <button class="pt-cell cat-biz" data-id="biz-5" data-cat="biz" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">49</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Lss</span>
+              <span class="pt-name">Lean Six Sigma</span>
+            </button>
+            <button class="pt-cell cat-biz" data-id="biz-6" data-cat="biz" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">50</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Bdi</span>
+              <span class="pt-name">Big Data &amp; BI Strategy</span>
+            </button>
+            <button class="pt-cell cat-biz" data-id="biz-7" data-cat="biz" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">51</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Pjm</span>
+              <span class="pt-name">Project Management</span>
+            </button>
+            <button class="pt-cell cat-biz" data-id="biz-8" data-cat="biz" tabindex="0">
+              <span class="pt-glare"></span>
+              <div class="pt-cell-top">
+                <span class="pt-number">52</span>
+                <span class="pt-pip"></span>
+              </div>
+              <span class="pt-symbol">Ldr</span>
+              <span class="pt-name">Leadership &amp; Mentorship</span>
             </button>
           </div>
 
@@ -748,11 +948,11 @@
           <div class="capability-inspector" id="capability-inspector" aria-live="polite">
             <div class="inspector-header">
               <div class="inspector-badge-group">
-                <span class="inspector-number" id="inspector-number">10</span>
+                <span class="inspector-number" id="inspector-number">07</span>
                 <span class="inspector-symbol" id="inspector-symbol">Ci</span>
               </div>
               <div class="inspector-title-group">
-                <span class="inspector-family" id="inspector-family">Analytics &amp; Data</span>
+                <span class="inspector-family" id="inspector-family">General Data Analysis</span>
                 <h3 class="inspector-name" id="inspector-name">Causal Inference (PSM &amp; DiD)</h3>
               </div>
             </div>
@@ -782,9 +982,9 @@
     </section>
 
     <!-- SELECTED PROJECTS SECTION -->
-    <section class="section projects-section fade-section" id="projects" aria-labelledby="projects-title">
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
       <div class="section-container">
-        <div class="section-header">
+        <div class="section-header fade-section">
           <div class="section-kicker">Interactive Portfolios &amp; Repositories</div>
           <h2 class="section-title" id="projects-title">Selected Projects</h2>
           <p class="section-subtitle">
@@ -792,7 +992,7 @@
           </p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-grid fade-section" style="transition-delay:0.15s">
           
           <!-- TreeStrat -->
           <article class="project-card">

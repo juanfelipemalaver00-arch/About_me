@@ -6,257 +6,484 @@
 (function () {
   'use strict';
 
-  // --- 1. FULL 27 CAPABILITIES DATA REGISTRY (Strictly in English) ---
+    // --- 1. FULL 52 CAPABILITIES DATA REGISTRY (Grounded in Skills_Clasificadas.docx & CV) ---
   const capabilitiesData = {
-    // Category 1: Analytics & Data (12 elements)
-    'ad-1': {
+    // Category 1: Languages (4 elements)
+    'lang-1': {
       number: '01',
-      symbol: 'Arm',
-      name: 'Association Rule Mining (ARM)',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Discovering hidden co-occurrence relationships, consumer purchase synergies, and high-affinity product bundles across massive transactional banking datasets.',
-      impact: 'Applied pattern extraction algorithms to evaluate merchant transactional co-dependencies and optimize portfolio cross-sell potential.'
-    },
-    'ad-2': {
-      number: '02',
-      symbol: 'Apr',
-      name: 'Apriori Algorithm',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Computing support, confidence, and lift thresholds on combinatorial transaction sets to synthesize actionable commercial recommendations.',
-      impact: 'Identified actionable product associations and basket pairings to curate data-driven bundle strategies for retail acquiring.'
-    },
-    'ad-3': {
-      number: '03',
-      symbol: 'Ssa',
-      name: 'Sequential Pattern Analysis (SSA)',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Modeling time-ordered transaction journeys and multi-stage customer lifecycles to detect churn risks and transition probabilities.',
-      impact: 'Anticipated client transaction sequences and flagged drop-off patterns to inform banking personalization pipelines.'
-    },
-    'ad-4': {
-      number: '04',
-      symbol: 'Pm',
-      name: 'Predictive Modeling',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Formulating supervised projection frameworks to forecast client propensity, portfolio growth, and market adoption curves.',
-      impact: 'Built commercial projection and predictive models in Python, R, and SQL to optimize high-impact campaigns across Latin American banking clients.'
-    },
-    'ad-5': {
-      number: '05',
-      symbol: 'Cl',
-      name: 'Clustering (K-Medoids / Gower)',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Partitioning high-dimensional commercial portfolios using custom distance metrics capable of seamlessly handling mixed continuous and categorical data.',
-      impact: 'Implemented K-Medoids Clustering with Gower Distance for merchant segmentation at Mastercard, generating <strong>over COP 5,000 million</strong> in annual profitability post-deployment.'
-    },
-    'ad-6': {
-      number: '06',
-      symbol: 'Ml',
-      name: 'Applied Machine Learning',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Deploying robust ensemble algorithms (Random Forest, XGBoost) and feature engineering pipelines for tabular banking ecosystems.',
-      impact: 'Constructed ensemble classification models flagging client purchase propensity, translated into targeted marketing archetypes for campaign optimization.'
-    },
-    'ad-7': {
-      number: '07',
-      symbol: 'Ec',
-      name: 'Advanced Econometrics',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Microeconometric modeling, instrumental variables, panel data regression, and rigorous hypothesis testing grounded in theoretical economics.',
-      impact: 'Awarded Best Final Project in Applied Microeconomics (Universidad del Rosario) and 4th place nationwide in the National Academic Economics Competition (CANE).'
-    },
-    'ad-8': {
-      number: '08',
       symbol: 'Py',
-      name: 'Python (Data Science & ML)',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Core analytical programming utilizing Scikit-Learn, Pandas, NumPy, PyTorch, PySpark, and TensorFlow for end-to-end data pipelines.',
-      impact: 'Engineered automated statistical workflows, large-scale ETL pipelines, and scalable modeling modules in production enterprise environments.'
+      name: 'Python',
+      family: 'Languages',
+      catClass: 'cat-lang',
+      app: 'Primary language for advanced machine learning, causal econometrics, and production data pipelines.',
+      impact: 'Engineered end-to-end econometric estimation models, automated feature engineering, and scalable ML modules across enterprise banking clients.'
     },
-    'ad-9': {
-      number: '09',
+    'lang-2': {
+      number: '02',
+      symbol: 'Sql',
+      name: 'SQL - MySQL',
+      family: 'Languages',
+      catClass: 'cat-lang',
+      app: 'Complex relational querying, transactional aggregation, window analytical functions, and schema optimization.',
+      impact: 'Queried and processed multi-million financial cardholder transaction databases; optimized query execution runtimes on enterprise data warehouses.'
+    },
+    'lang-3': {
+      number: '03',
       symbol: 'R',
-      name: 'R (Spatial & Time Series)',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Specialized statistical modeling, longitudinal panel time series, spatial vector packages, and reproducible synthetic dataset generation.',
-      impact: 'Authored ML_for_ALL educational repository and university teaching curriculum for econometrics, statistical inference, and spatial models.'
+      name: 'R',
+      family: 'Languages',
+      catClass: 'cat-lang',
+      app: 'Rigorous statistical inference, longitudinal panel econometrics, spatial vector mapping, and reproducible research.',
+      impact: 'Created the open-source ML_for_ALL curriculum and taught applied microeconometrics, statistical inference, and spatial models at Universidad del Rosario.'
     },
-    'ad-10': {
-      number: '10',
+    'lang-4': {
+      number: '04',
+      symbol: 'Tex',
+      name: 'LaTeX',
+      family: 'Languages',
+      catClass: 'cat-lang',
+      app: 'Technical scientific typesetting, mathematical formalisms, academic documentation, and publication-ready econometric reports.',
+      impact: 'Authored mathematical research proofs, econometric working papers, and technical institutional documentation with full academic rigor.'
+    },
+
+    // Category 2: General Data Analysis (13 elements)
+    'gda-1': {
+      number: '05',
+      symbol: 'Dg',
+      name: 'Data Governance',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Establishing enterprise data policies, metadata standards, lineage mapping, and data stewardship across analytical environments.',
+      impact: 'Designed structured governance protocols and standardized pipeline schemas ensuring auditability and compliance for institutional stakeholders.'
+    },
+    'gda-2': {
+      number: '06',
+      symbol: 'Gdp',
+      name: 'GDPR (PII Protection)',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Implementing privacy-by-design, data masking, pseudonymization, and strict compliance with European and international privacy frameworks.',
+      impact: 'Ensured strict GDPR compliance when engineering analytics and data features handling sensitive financial and cardholder PII.'
+    },
+    'gda-3': {
+      number: '07',
       symbol: 'Ci',
       name: 'Causal Inference (PSM & DiD)',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
       app: 'Quasi-experimental impact evaluation to isolate true incremental commercial lift from organic macroeconomic drift.',
       impact: 'Applied Propensity Score Matching (PSM) & Difference-in-Differences (DiD) at Mastercard (+3% spend lift per iteration); implemented Callaway-Sant’Anna multi-period DiD for global academic research.'
     },
-    'ad-11': {
+    'gda-4': {
+      number: '08',
+      symbol: 'Ab',
+      name: 'A/B Testing & RCTs',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Randomized controlled trial (RCT) design, sample size power calculations, variance reduction, and minimum detectable effect (MDE) analysis.',
+      impact: 'Designed statistical experimentation frameworks for merchant offers and user engagement tests, driving statistically significant conversion increases.'
+    },
+    'gda-5': {
+      number: '09',
+      symbol: 'Ecm',
+      name: 'Advanced Econometrics & Impact Measurement',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Microeconometric modeling, instrumental variables, panel data regression, and rigorous hypothesis testing grounded in economic theory.',
+      impact: 'Awarded Best Final Project in Applied Microeconomics (Universidad del Rosario) and 4th place nationwide in the National Academic Economics Competition (CANE).'
+    },
+    'gda-6': {
+      number: '10',
+      symbol: 'Psm',
+      name: 'Propensity Score Matching (PSM)',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Balancing multi-dimensional covariates between treated and control cohorts in observational commercial datasets.',
+      impact: 'Constructed logistic propensity matching algorithms at Mastercard to isolate clean baseline counterfactuals for loyalty program evaluations.'
+    },
+    'gda-7': {
       number: '11',
+      symbol: 'Exp',
+      name: 'Experiments Design',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Formulating robust hypothesis testing structures, multi-arm setups, stratified randomization, and pre-post intervention analysis.',
+      impact: 'Architected clean experimental testbeds across commercial portfolios to validate revenue mechanics prior to broad market rollout.'
+    },
+    'gda-8': {
+      number: '12',
+      symbol: 'Did',
+      name: "Difference in Differences (Callaway & Sant'Anna)",
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Modern staggered adoption DiD modeling avoiding two-way fixed effects (TWFE) negative weighting biases.',
+      impact: 'Applied Callaway-Sant’Anna multi-period DiD models for academic research with faculty from Princeton, Penn State, and University of Chicago.'
+    },
+    'gda-9': {
+      number: '13',
+      symbol: 'Seq',
+      name: 'Sequential Pattern Analysis (Cross-Sale)',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Modeling time-ordered transaction sequences to uncover cross-sell paths and multi-stage client purchase trajectories.',
+      impact: 'Identified high-conversion sequential buying pathways to recommend tailored product sequences across commercial cardholder segments.'
+    },
+    'gda-10': {
+      number: '14',
       symbol: 'Rfm',
       name: 'RFM Customer Models',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
       app: 'Recency, Frequency, and Monetary transaction scoring methodologies to categorize client lifetime engagement and margin contribution.',
       impact: 'Designed customer segmentation and scoring based on RFM models, increasing the <strong>monetary effectiveness of loyalty programs by 23%</strong>.'
     },
-    'ad-12': {
-      number: '12',
-      symbol: 'Bi',
-      name: 'Business Intelligence (Tableau / Power BI)',
-      family: 'Analytics & Data',
-      catClass: 'cat-ad',
-      app: 'Designing intuitive executive scorecards, interactive KPI monitors, and exploratory business dashboards for C-level governance.',
-      impact: 'Translated complex machine learning outputs and predictive projections into executive dashboards for bank boards of directors to guide strategic decisions.'
+    'gda-11': {
+      number: '15',
+      symbol: 'Gis',
+      name: 'Spatial Analysis (Shapefiles & Rasters)',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Geospatial vector processing, polygon intersections, raster map algebra, and spatial econometric modeling.',
+      impact: 'Engineered spatial analysis workflows in R analyzing regional economic disparities, public policy impacts, and territorial trends.'
+    },
+    'gda-12': {
+      number: '16',
+      symbol: 'Ts',
+      name: 'Time Series Analysis',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'ARIMA, exponential smoothing, vector autoregression (VAR), stationarity testing, and cointegration modeling.',
+      impact: 'Projected client transactional volume and seasonal payment fluctuations to inform treasury liquidity and promotional scheduling.'
+    },
+    'gda-13': {
+      number: '17',
+      symbol: 'Pca',
+      name: 'PCA (Principal Component Analysis)',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Dimensionality reduction, orthogonal factor extraction, and feature decorrelation for high-dimensional financial datasets.',
+      impact: 'Synthesized multidimensional merchant behavior signals into interpretable principal components to eliminate multicollinearity in risk models.'
     },
 
-    // Category 2: Business Strategy & Consulting (5 elements)
-    'bc-1': {
-      number: '13',
-      symbol: 'Cs',
+    // Category 3: Machine Learning & Data Science (9 elements)
+    'mlds-1': {
+      number: '18',
+      symbol: 'Mls',
+      name: 'Python (Scikit-Learn, PyTorch, PySpark, TF)',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'End-to-end predictive modeling, neural architectures, distributed big data transformations, and feature engineering.',
+      impact: 'Engineered automated statistical workflows, large-scale ETL pipelines, and scalable modeling modules in production enterprise environments.'
+    },
+    'mlds-2': {
+      number: '19',
+      symbol: 'Etl',
+      name: 'ETL Pipelines',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'Automating extract, transform, and load workflows with automated data cleansing, schema validation, and incremental refreshes.',
+      impact: 'Streamlined transactional ingestion into structured analytical feature stores, cutting manual preparation overhead significantly.'
+    },
+    'mlds-3': {
+      number: '20',
+      symbol: 'Mla',
+      name: 'Machine Learning (Clustering, Ensembles, Trees)',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'Supervised and unsupervised models utilizing Euclidean/Gower distances, ElasticNet, Random Forest, XGBoost, and LightGBM.',
+      impact: 'Implemented K-Medoids Clustering with Gower Distance for merchant segmentation at Mastercard, generating <strong>over COP 5,000 million</strong> in annual profitability.'
+    },
+    'mlds-4': {
+      number: '21',
+      symbol: 'Arm',
+      name: 'ARM & Apriori Algorithm',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'Combinatorial market basket analysis, itemset support/confidence mining, and affinity graph modeling.',
+      impact: 'Uncovered hidden cross-selling product associations in banking cardholder transactions to optimize merchant co-marketing initiatives.'
+    },
+    'mlds-5': {
+      number: '22',
+      symbol: 'Mcp',
+      name: 'Model Context Protocol (MCP)',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'Standardized client-server protocol enabling LLMs to securely query databases, run code, and interface with external tool ecosystems.',
+      impact: 'Architected custom MCP tool integrations connecting enterprise models with structured financial data stores and analytical APIs.'
+    },
+    'mlds-6': {
+      number: '23',
+      symbol: 'Agy',
+      name: 'Claude Code, Codex & Antigravity',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'State-of-the-art autonomous coding agents, agentic workflows, repository synthesis, and interactive CLI development.',
+      impact: 'Leveraged advanced AI coding environments to accelerate data software development, test automation, and full-stack prototyping.'
+    },
+    'mlds-7': {
+      number: '24',
+      symbol: 'Agt',
+      name: 'Skills & Multi-Agent Teams',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'Designing modular custom skills, role-based agent hierarchies, and cooperative multi-agent orchestration for complex workflows.',
+      impact: 'Built modular agent configurations with specialized roles (Data Analyst, QA, Researcher, Orchestrator) to solve complex analytical tasks.'
+    },
+    'mlds-8': {
+      number: '25',
+      symbol: 'Prm',
+      name: 'Prompt Engineering',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'Few-shot prompting, chain-of-thought, structured output constraints, and system prompt optimization for high-reliability outputs.',
+      impact: 'Engineered deterministic prompting frameworks producing structured JSON outputs for enterprise data classification and summary generation.'
+    },
+    'mlds-9': {
+      number: '26',
+      symbol: 'Crw',
+      name: 'CrewAI',
+      family: 'Machine Learning & Data Science',
+      catClass: 'cat-mlds',
+      app: 'Autonomous multi-agent orchestration frameworks assigning role-based tasks, memory, and tool usage to collaborate on end-to-end goals.',
+      impact: 'Built collaborative multi-agent pipelines for automated market research, competitive benchmarking, and structured data synthesis.'
+    },
+
+    // Category 4: Stack & Tools (18 elements)
+    'tool-1': {
+      number: '27',
+      symbol: 'Aws',
+      name: 'AWS (Cloud Ecosystem)',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Enterprise cloud infrastructure for scalable analytics, distributed storage, and compute environments.',
+      impact: 'Architected cloud solutions utilizing Amazon Web Services for data processing, secure querying, and client deliverable pipelines.'
+    },
+    'tool-2': {
+      number: '28',
+      symbol: 'Glu',
+      name: 'AWS Glue',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Serverless data integration service for cataloging, ETL jobs, and automated data discovery.',
+      impact: 'Configured metadata crawlers and serverless ETL jobs to transform raw financial logs into optimized parquet schemas.'
+    },
+    'tool-3': {
+      number: '29',
+      symbol: 'Wrn',
+      name: 'AWS Data Wrangler',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Accelerating Python pandas integration with AWS services (Athena, S3, Redshift) via high-performance vectorized I/O.',
+      impact: 'Integrated awswrangler into statistical scripts for seamless data extraction and high-speed data lake transfers.'
+    },
+    'tool-4': {
+      number: '30',
+      symbol: 'Stp',
+      name: 'AWS Step Functions',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Visual workflow orchestrator coordinating multi-step distributed analytical pipelines and event-driven automation.',
+      impact: 'Designed resilient state machines coordinating data ingestion, validation checks, and ML model scoring runs.'
+    },
+    'tool-5': {
+      number: '31',
+      symbol: 'S3',
+      name: 'AWS S3 (Data Lake)',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Object storage architecture, bucket policy security, lifecycle rules, and partitioning strategies for analytical data lakes.',
+      impact: 'Organized enterprise data lakes in S3 with partitioned directory layouts to minimize Athena query scan costs.'
+    },
+    'tool-6': {
+      number: '32',
+      symbol: 'Put',
+      name: 'PuTTY & WinSCP',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'SSH tunneling, remote server administration, secure key authentication, and SFTP data transfer.',
+      impact: 'Administered secure remote analytics servers, automated file transfers, and managed production compute jobs via terminal.'
+    },
+    'tool-7': {
+      number: '33',
+      symbol: 'Dbr',
+      name: 'Databricks',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Unified lakehouse platform for collaborative Apache Spark computing, MLflow tracking, and big data transformations.',
+      impact: 'Executed large-scale data science notebooks and distributed transformations across multi-node Spark clusters.'
+    },
+    'tool-8': {
+      number: '34',
+      symbol: 'Dku',
+      name: 'Dataiku DSS',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Collaborative enterprise data science platform for visual recipes, flow governance, and automated deployment.',
+      impact: 'Constructed end-to-end data preparation flows and production scoring recipes in client enterprise deployments.'
+    },
+    'tool-9': {
+      number: '35',
+      symbol: 'Knm',
+      name: 'KNIME Analytics',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Visual workflow design for data mining, modular analytics, and auditable pipeline construction.',
+      impact: 'Built automated statistical transformation nodes and data audit workflows for rapid prototyping without code sprawl.'
+    },
+    'tool-10': {
+      number: '36',
+      symbol: 'Pbi',
+      name: 'Power BI',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Interactive business intelligence dashboards, DAX measures, data modeling, and automated executive reporting.',
+      impact: 'Developed comprehensive commercial dashboards displaying client segment KPI trajectories and campaign performance metrics.'
+    },
+    'tool-11': {
+      number: '37',
+      symbol: 'Tab',
+      name: 'Tableau',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Advanced visual analytics, parameter-driven forecasting, geographical maps, and C-suite KPI monitoring.',
+      impact: 'Built executive scorecards translating machine learning segmentations into actionable visual stories for banking directors.'
+    },
+    'tool-12': {
+      number: '38',
+      symbol: 'Spk',
+      name: 'Hadoop & Apache Spark',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Distributed computing, MapReduce concepts, resilient distributed datasets (RDDs), and Spark SQL on large-scale clusters.',
+      impact: 'Processed massive transaction logs in distributed memory, reducing data aggregation times from hours to minutes.'
+    },
+    'tool-13': {
+      number: '39',
+      symbol: 'Stl',
+      name: 'Streamlit (Web Apps)',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Rapidly prototyping and deploying interactive data applications, simulation widgets, and machine learning dashboards in pure Python.',
+      impact: 'Built interactive web applications allowing commercial stakeholders to dynamically simulate marketing budget allocations and ROI.'
+    },
+    'tool-14': {
+      number: '40',
+      symbol: 'Vrc',
+      name: 'Vercel (Deployment)',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Edge cloud hosting, modern web deployment, automated CI/CD git workflows, and high-performance CDN distribution.',
+      impact: 'Deployed responsive web tools and client-facing portals with instant global performance and automated version control.'
+    },
+    'tool-15': {
+      number: '41',
+      symbol: 'Xls',
+      name: 'Excel (Macros & Advanced Modeling)',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'VBA scripting, financial sensitivity modeling, Monte Carlo simulations, and automated workbook data flows.',
+      impact: 'Engineered high-complexity financial models and automated reporting macros used in boardroom presentations and consulting deliverables.'
+    },
+    'tool-16': {
+      number: '42',
+      symbol: 'Pqw',
+      name: 'Power Query & Power Pivot',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'M-code transformations, star-schema data modeling, relational dimension tables, and in-memory DAX calculations.',
+      impact: 'Unified multi-source spreadsheets into structured data models, automating recurring monthly reporting cycles.'
+    },
+    'tool-17': {
+      number: '43',
+      symbol: 'Ide',
+      name: 'VS Code & Jupyter',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Modern developer IDE environments, interactive computational exploration, remote SSH debugging, and git version control.',
+      impact: 'Primary daily coding environment for rapid statistical experimentation, reproducible markdown reporting, and production Python scripts.'
+    },
+    'tool-18': {
+      number: '44',
+      symbol: 'Imp',
+      name: 'Apache Impala',
+      family: 'Stack & Tools',
+      catClass: 'cat-tool',
+      app: 'Low-latency massively parallel processing (MPP) SQL query engine on Apache Hadoop datasets.',
+      impact: 'Conducted high-speed interactive ad-hoc analytical queries directly on petabyte-scale Hadoop data lakes without batch lag.'
+    },
+
+    // Category 5: Consulting & Business (8 elements)
+    'biz-1': {
+      number: '45',
+      symbol: 'Cst',
       name: 'Strategic Consulting',
-      family: 'Business Strategy & Consulting',
-      catClass: 'cat-bc',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
       app: 'Diagnosing operational friction, evaluating competitive acquiring landscapes, and defining evidence-based commercial roadmaps.',
       impact: 'Advised corporate clients and financial institutions across Latin America on revenue monetization, card acceptance, and market expansion.'
     },
-    'bc-2': {
-      number: '14',
-      symbol: 'Bt',
-      name: 'Analytics Business Translation',
-      family: 'Business Strategy & Consulting',
-      catClass: 'cat-bc',
-      app: 'The vital bridge connecting loss functions, high-dimensional clustering, and p-values directly to commercial P&L expansion.',
-      impact: 'Selected to deliver the Graduation Speech at Universidad del Rosario; Student Voice Champion at the London School of Economics (LSE).'
+    'biz-2': {
+      number: '46',
+      symbol: 'Exc',
+      name: 'Executive Communication',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Synthesizing complex econometric findings and model loss metrics into crisp C-suite recommendations and board presentations.',
+      impact: 'Delivered graduation speech at Universidad del Rosario; presented strategic recommendations to bank vice-presidents across LATAM.'
     },
-    'bc-3': {
-      number: '15',
-      symbol: 'Co',
-      name: 'Campaign & Margin Optimization',
-      family: 'Business Strategy & Consulting',
-      catClass: 'cat-bc',
-      app: 'Calibrating marketing spend allocation, customer tiering, and commercial pricing structures to maximize net portfolio ROI.',
-      impact: 'Streamlined mass banking campaigns across LATAM, lifting spend lift by 3% per iteration and reducing client communication fatigue.'
+    'biz-3': {
+      number: '47',
+      symbol: 'Skm',
+      name: 'Stakeholders Management',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Aligning technical data teams, commercial product owners, and executive leadership toward unified delivery goals.',
+      impact: 'Successfully coordinated multi-disciplinary initiatives across international banking partners, ensuring on-time adoption and buy-in.'
     },
-    'bc-4': {
-      number: '16',
-      symbol: 'Di',
-      name: 'Interactive Business Studios',
-      family: 'Business Strategy & Consulting',
-      catClass: 'cat-bc',
-      app: 'Engineering accessible web simulation tools that allow non-technical executives to test commercial scenarios in real time.',
-      impact: 'Developed TreeStrat (Streamlit decision tree studio) and ClusterLab (Vercel adaptive clustering tool) for dynamic stakeholder scenario testing.'
+    'biz-4': {
+      number: '48',
+      symbol: 'Aig',
+      name: 'AI Governance, Risk & Ethics',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Assessing algorithmic bias, model fairness, regulatory compliance (EU AI Act), transparency, and responsible AI guardrails.',
+      impact: 'Standardized ethical evaluation protocols and bias mitigations for proprietary predictive models handling consumer credit decisions.'
     },
-    'bc-5': {
-      number: '17',
-      symbol: 'Cc',
-      name: 'Case Resolution (Mastercard & BCG)',
-      family: 'Business Strategy & Consulting',
-      catClass: 'cat-bc',
-      app: 'Structured problem solving under rigorous corporate case competition frameworks, prioritizing feasibility, unit economics, and impact.',
-      impact: 'Placed 1st in Colombia and 3rd in LAC in Mastercard Case Competition; Semifinalist in the National Consulting Competition solving cases proposed by BCG.'
+    'biz-5': {
+      number: '49',
+      symbol: 'Lss',
+      name: 'Lean Six Sigma',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'DMAIC methodology, root-cause analysis, variance reduction, and process cycle time optimization.',
+      impact: 'Applied Lean Six Sigma principles to streamline data validation procedures, cutting analytical turnaround cycles and errors.'
     },
-
-    // Category 3: Data Engineering (5 elements)
-    'de-1': {
-      number: '18',
-      symbol: 'Etl',
-      name: 'ETL Pipelines (Python / SQL)',
-      family: 'Data Engineering',
-      catClass: 'cat-de',
-      app: 'Designing high-throughput, automated ingestion pipelines transforming raw financial transaction logs into clean feature stores.',
-      impact: 'Engineered automated pipelines for large-scale transactional data, optimizing throughput while ensuring full compliance with GDPR and PII norms.'
+    'biz-6': {
+      number: '50',
+      symbol: 'Bdi',
+      name: 'Big Data & Business Intelligence Strategy',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Translating raw transactional data architectures into strategic enterprise decision systems and commercial competitive advantages.',
+      impact: 'Formulated commercial intelligence roadmaps for acquirers and retail banking entities, directly unlocking untapped revenue streams.'
     },
-    'de-2': {
-      number: '19',
-      symbol: 'Sql',
-      name: 'Advanced SQL & Big Data',
-      family: 'Data Engineering',
-      catClass: 'cat-de',
-      app: 'Complex analytical window functions, recursive CTEs, and distributed querying across enterprise big data clusters.',
-      impact: 'Formulated high-performance queries across Hadoop, Impala, SQLite, and MySQL enterprise banking databases.'
+    'biz-7': {
+      number: '51',
+      symbol: 'Pjm',
+      name: 'Project Management',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Agile/Scrum ceremonies, milestone scoping, risk mitigation matrices, and cross-functional project tracking.',
+      impact: 'Led high-impact analytics consulting deliverables at Mastercard, delivering multi-million COP profitability within tight deadlines.'
     },
-    'de-3': {
-      number: '20',
-      symbol: 'Aws',
-      name: 'Cloud Computing & AWS',
-      family: 'Data Engineering',
-      catClass: 'cat-de',
-      app: 'Data preparation, design, and deployment of cloud ML workflows across Amazon SageMaker, S3, Athena, DataWrangler, and AWS Glue.',
-      impact: 'Preparing for AWS MLA-C01 (Machine Learning Associate Engineer) certification with hands-on enterprise cloud pipeline implementations.'
-    },
-    'de-4': {
-      number: '21',
-      symbol: 'Ing',
-      name: 'Ingestion Platforms',
-      family: 'Data Engineering',
-      catClass: 'cat-de',
-      app: 'Enterprise ETL orchestration, collaborative data science workflows, and automated pipeline scheduling.',
-      impact: 'Proficient in data analysis, business intelligence, and enterprise ETL pipelines using Databricks, Dataiku, and Knime.'
-    },
-    'de-5': {
-      number: '22',
-      symbol: 'Dq',
-      name: 'Data Governance & Quality',
-      family: 'Data Engineering',
-      catClass: 'cat-de',
-      app: 'Establishing automated data validation rules, schema drift monitors, outlier controls, and reproducibility protocols.',
-      impact: 'Standardized feature engineering and data validation workflows ensuring robust reproducibility across banking campaign models.'
-    },
-
-    // Category 4: Leadership & EQ (5 elements)
-    'le-1': {
-      number: '23',
-      symbol: 'Lp',
-      name: 'High-Impact Project Leadership',
-      family: 'Leadership & EQ',
-      catClass: 'cat-le',
-      app: 'End-to-end orchestration of analytics initiatives from client scoping to technical modeling and executive boardroom adoption.',
-      impact: 'Led high-impact analytics consulting deliverables at Mastercard, directly generating multi-million COP profitability for clients.'
-    },
-    'le-2': {
-      number: '24',
-      symbol: 'Li',
-      name: 'Institutional Leadership (LSE)',
-      family: 'Leadership & EQ',
-      catClass: 'cat-le',
-      app: 'Representing student and institutional interests, mediating academic governance dialogues, and driving community consensus.',
-      impact: 'Elected Student Voice Group Champion at the London School of Economics (LSE) for the 2022–2023 academic year.'
-    },
-    'le-3': {
-      number: '25',
-      symbol: 'Me',
-      name: 'Mentorship & Communication',
-      family: 'Leadership & EQ',
-      catClass: 'cat-le',
-      app: 'Pedagogical communication of complex statistical distributions, inference methods, and econometric coding to undergraduate students.',
-      impact: 'Taught 6 weekly hours of university lectures and labs for Economics, Applied Math, and CS students; received Award of Excellence (Univ. del Rosario).'
-    },
-    'le-4': {
-      number: '26',
-      symbol: 'Cr',
-      name: 'Global Research Coordination',
-      family: 'Leadership & EQ',
-      catClass: 'cat-le',
-      app: 'Collaborating with international research faculty and doctoral scholars on empirical econometric identification strategies.',
-      impact: 'Contributed to collaborative research projects with faculty from Princeton University, Penn State, and the University of Chicago.'
-    },
-    'le-5': {
-      number: '27',
-      symbol: 'Gt',
-      name: 'High-Pressure Team Management',
-      family: 'Leadership & EQ',
-      catClass: 'cat-le',
-      app: 'Fostering cross-disciplinary alignment, rapid consensus, and high delivery standards under strict competitive deadlines.',
-      impact: 'Global Finalist in Mastercard Global Innovation Challenge (leading the Innova AI team) and awarded Best Intern of the Year 2025.'
+    'biz-8': {
+      number: '52',
+      symbol: 'Ldr',
+      name: 'Leadership & Mentorship',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Pedagogical mentoring, cross-functional team coordination, and student representation in international institutions.',
+      impact: 'Awarded Best Intern of the Year 2025 at Mastercard; Global Finalist in Mastercard Innovation Challenge; Student Voice Champion at LSE.'
     }
   };
 
@@ -301,7 +528,6 @@
     cells.forEach(cell => {
       const id = cell.getAttribute('data-id');
 
-      // 3D tilt tracking cursor
       cell.addEventListener('mousemove', (e) => {
         const rect = cell.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -340,7 +566,7 @@
       });
     });
 
-    // Category Filters
+    // Category Filters for the 5 Families: lang, gda, mlds, tool, biz
     filterTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const filter = tab.getAttribute('data-filter');
@@ -369,11 +595,137 @@
       });
     });
 
-    // Default selection: Causal Inference (ad-10)
-    updateInspector('ad-10');
+    // Default selection: Causal Inference (gda-3)
+    updateInspector('gda-3');
   }
 
-  // --- 3. 3D INTERACTIVE ANALYTICAL PHYSICS SCULPTURE (THREE.JS) ---
+  // --- 2.1 FLOATING SKILLS CLOUD ON 3D INTRO STAGE (HORIZONTAL, VARIED OPACITIES, CONCURRENCY LIMIT) ---
+  function initFloatingSkillsCloud() {
+    const container = document.getElementById('intro-floating-skills');
+    if (!container) return;
+
+    // Rich pool of authentic skills from Skills_Clasificadas.docx
+    const skillsPool = [
+      'Python',
+      'Machine Learning',
+      'Causal Inference',
+      'SQL - MySQL',
+      'A/B Testing',
+      'Advanced Econometrics',
+      'AWS Cloud',
+      'Propensity Score Matching',
+      'Tableau',
+      'Diff-in-Differences (DiD)',
+      'Prompt Engineering',
+      'CrewAI',
+      'Data Governance',
+      'Power BI',
+      'Databricks',
+      'Streamlit',
+      'Sub-Agent Teams',
+      'PCA Analysis',
+      'Spatial Analysis',
+      'Time Series',
+      'ETL Pipelines',
+      'Random Forest & XGBoost',
+      'K-Medoids / Gower',
+      'Model Context Protocol',
+      'Executive Communication',
+      'Lean Six Sigma',
+      'Hadoop & Spark',
+      'Power Query & DAX',
+      'Dataiku DSS',
+      'GDPR & PII'
+    ];
+
+    // Strictly controlled slots: 7 visible at any one time to prevent visual clutter
+    // Fixed non-overlapping coordinates in perimeter zones surrounding the central 3D core
+    const slots = [
+      { x: 16, y: 22, opacity: 0.85, drift: 0 },
+      { x: 82, y: 24, opacity: 0.50, drift: 1 },
+      { x: 14, y: 52, opacity: 0.65, drift: 2 },
+      { x: 84, y: 54, opacity: 0.80, drift: 0 },
+      { x: 22, y: 78, opacity: 0.45, drift: 1 },
+      { x: 78, y: 80, opacity: 0.75, drift: 2 },
+      { x: 50, y: 15, opacity: 0.60, drift: 0 }
+    ];
+
+    // Responsive position adjustments for mobile/tablet screens
+    function getSlotCoords(slot) {
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        // Bring closer to corners / edges with tighter margins
+        return {
+          x: slot.x < 50 ? Math.max(slot.x, 20) : Math.min(slot.x, 80),
+          y: slot.y
+        };
+      }
+      return { x: slot.x, y: slot.y };
+    }
+
+    let activeSkills = new Set();
+
+    function getRandomUnusedSkill() {
+      const available = skillsPool.filter(s => !activeSkills.has(s));
+      if (available.length === 0) {
+        activeSkills.clear();
+        return skillsPool[Math.floor(Math.random() * skillsPool.length)];
+      }
+      const chosen = available[Math.floor(Math.random() * available.length)];
+      activeSkills.add(chosen);
+      return chosen;
+    }
+
+    slots.forEach((slot, index) => {
+      const pill = document.createElement('div');
+      pill.className = 'floating-skill-pill';
+      pill.setAttribute('aria-hidden', 'true');
+      pill.style.animationDelay = `${(slot.drift * 1.5).toFixed(1)}s`;
+
+      const dot = document.createElement('span');
+      dot.className = 'skill-dot';
+
+      const label = document.createElement('span');
+      label.className = 'skill-text';
+
+      pill.appendChild(dot);
+      pill.appendChild(label);
+      container.appendChild(pill);
+
+      function cycleWord() {
+        // Step 1: Smooth fade out
+        pill.style.opacity = '0';
+        pill.style.transform = 'translate(-50%, -50%) translateY(6px)';
+
+        setTimeout(() => {
+          // Step 2: Pick new skill
+          const skill = getRandomUnusedSkill();
+          label.textContent = skill;
+
+          // Position in slot
+          const coords = getSlotCoords(slot);
+          pill.style.left = `${coords.x}%`;
+          pill.style.top = `${coords.y}%`;
+
+          // Step 3: Smooth fade in with assigned opacity
+          requestAnimationFrame(() => {
+            pill.style.opacity = slot.opacity.toString();
+            pill.style.transform = 'translate(-50%, -50%) translateY(0)';
+          });
+
+          // Next cycle in 6.5s to 9s with slight variation
+          const duration = 6500 + Math.random() * 2500;
+          setTimeout(cycleWord, duration);
+        }, 750);
+      }
+
+      // Staggered initial entrance for a cool, organic boot-up experience
+      const initialDelay = 350 + index * 420;
+      setTimeout(cycleWord, initialDelay);
+    });
+  }
+
+// --- 3. 3D INTERACTIVE ANALYTICAL PHYSICS SCULPTURE (THREE.JS) ---
   function initThreeJsPhysics() {
     const container = document.getElementById('intro-three-container');
     if (!container || typeof THREE === 'undefined') return;
@@ -409,8 +761,9 @@
     dirLight2.position.set(-5, -5, 4);
     scene.add(dirLight2);
 
-    // Group for entire interactive sculpture
+    // Group for entire interactive sculpture with entrance scale-in
     const sculptureGroup = new THREE.Group();
+    sculptureGroup.scale.set(0.68, 0.68, 0.68);
     scene.add(sculptureGroup);
 
     // 1. Central Geodesic Icosahedron Core (Frosted Wireframe + Inner Glass Sphere)
@@ -518,7 +871,7 @@
     let prevMouseX = 0;
     let prevMouseY = 0;
     let angularVelX = 0;
-    let angularVelY = 0.004; // Gentle default spin
+    let angularVelY = 0.016; // Dynamic entrance spin that settles into smooth idle
 
     container.addEventListener('mousedown', (e) => {
       isDragging = true;
@@ -591,6 +944,11 @@
       requestAnimationFrame(animate);
 
       const elapsedTime = clock.getElapsedTime();
+
+      // Smooth entrance zoom-in expansion
+      if (sculptureGroup.scale.x < 0.998) {
+        sculptureGroup.scale.lerp(new THREE.Vector3(1, 1, 1), 0.04);
+      }
 
       // Apply drag momentum with smooth damping
       sculptureGroup.rotation.y += angularVelY;
@@ -882,37 +1240,52 @@
 
       // 1. Scroll hint prompt fades out rapidly once user initiates scroll
       if (scrollHint) {
-        scrollHint.style.opacity = progress > 0.05 ? '0' : '1';
+        scrollHint.style.opacity = progress > 0.04 ? '0' : '1';
       }
 
-      // 2. Phased Text Overlay:
-      // 0.0 - 0.18: Completely invisible (only interactive physics model floating in white space)
-      // 0.18 - 0.58: Smooth fade-in & ascent of Juan Felipe Malaver O. & Thanks for your interest
-      // 0.58 - 0.78: Full prominent visibility
-      // 0.78 - 1.00: Fade-out as stage dissolves into main landing page
-      if (progress < 0.18) {
+      // 2. Floating skills cloud cross-fade:
+      // Highly visible in Phase 1 (0.0 to 0.20), smoothly cross-fades out during Phase 2 (0.20 to 0.45)
+      // so the typographic name overlay emerges with pristine legibility
+      const floatingSkillsContainer = document.getElementById('intro-floating-skills');
+      if (floatingSkillsContainer) {
+        if (progress <= 0.18) {
+          floatingSkillsContainer.style.opacity = '1';
+        } else if (progress <= 0.42) {
+          const p = (progress - 0.18) / 0.24;
+          floatingSkillsContainer.style.opacity = Math.max(1 - p, 0).toFixed(3);
+        } else {
+          floatingSkillsContainer.style.opacity = '0';
+        }
+      }
+
+      // 3. Phased Text Overlay:
+      // Phase 1 (0.0 - 0.20): Invisible (focus on 3D sculpture + floating skills cloud)
+      // Phase 2 (0.20 - 0.60): Silky fade-in and smooth ascent of "Juan Felipe Malaver O." & "Thanks for your interest"
+      // Phase 2 Peak (0.60 - 0.76): Crisp full presence
+      // Phase 3 (0.76 - 1.00): Elegant fade-out and subtle upward dissolve as main landing content emerges
+      if (progress < 0.20) {
         overlayText.style.opacity = '0';
-        overlayText.style.transform = 'translateY(24px)';
-      } else if (progress <= 0.58) {
-        const p = (progress - 0.18) / 0.40;
+        overlayText.style.transform = 'translateY(28px)';
+      } else if (progress <= 0.60) {
+        const p = (progress - 0.20) / 0.40;
         const clampedP = Math.min(Math.max(p, 0), 1);
         overlayText.style.opacity = clampedP.toFixed(3);
-        overlayText.style.transform = `translateY(${(24 * (1 - clampedP)).toFixed(1)}px)`;
-      } else if (progress <= 0.78) {
+        overlayText.style.transform = `translateY(${(28 * (1 - clampedP)).toFixed(1)}px)`;
+      } else if (progress <= 0.76) {
         overlayText.style.opacity = '1';
         overlayText.style.transform = 'translateY(0px)';
       } else {
-        const pOut = (progress - 0.78) / 0.22;
+        const pOut = (progress - 0.76) / 0.24;
         overlayText.style.opacity = Math.max(1 - pOut, 0).toFixed(3);
-        overlayText.style.transform = `translateY(${(-16 * pOut).toFixed(1)}px)`;
+        overlayText.style.transform = `translateY(${(-18 * pOut).toFixed(1)}px)`;
       }
 
-      // 3. Stage Viewport Dissolve & Main Content Gradual Fade-in
-      if (progress > 0.72) {
-        const pTransition = (progress - 0.72) / 0.28;
+      // 4. Stage Viewport Cross-Dissolve & Main Content Fade-in
+      if (progress > 0.70) {
+        const pTransition = (progress - 0.70) / 0.30;
         viewport.style.opacity = Math.max(1 - pTransition, 0).toFixed(3);
         if (mainContent) {
-          mainContent.style.opacity = Math.min(pTransition * 1.35, 1).toFixed(3);
+          mainContent.style.opacity = Math.min(pTransition * 1.3, 1).toFixed(3);
         }
       } else {
         viewport.style.opacity = '1';
@@ -921,9 +1294,9 @@
         }
       }
 
-      // 4. Site Header visibility
+      // 5. Sticky Header visibility with smooth slide
       if (header) {
-        if (progress >= 0.82) {
+        if (progress >= 0.80) {
           header.classList.add('header-visible');
           header.classList.remove('header-intro-hidden');
         } else {
@@ -991,6 +1364,7 @@
   // Run initializers on DOM Ready
   document.addEventListener('DOMContentLoaded', () => {
     initPeriodicTable();
+    initFloatingSkillsCloud();
     initThreeJsPhysics();
     initIntroScroll();
     initExperienceScrollObserver();
