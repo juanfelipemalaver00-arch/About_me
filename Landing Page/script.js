@@ -8,47 +8,80 @@
 
     // --- 1. FULL 52 CAPABILITIES DATA REGISTRY (Grounded in Skills_Clasificadas.docx & CV) ---
   const capabilitiesData = {
-    // Category 1: Languages (4 elements)
-    'lang-1': {
+    'prog-1': {
       number: '01',
       symbol: 'Py',
       name: 'Python',
-      family: 'Languages',
-      catClass: 'cat-lang',
+      family: 'Programming Languages',
+      catClass: 'cat-prog',
       app: 'Primary language for advanced machine learning, causal econometrics, and production data pipelines.',
       impact: 'Engineered end-to-end econometric estimation models, automated feature engineering, and scalable ML modules across enterprise banking clients.'
     },
-    'lang-2': {
+    'prog-2': {
       number: '02',
       symbol: 'Sql',
       name: 'SQL - MySQL',
-      family: 'Languages',
-      catClass: 'cat-lang',
+      family: 'Programming Languages',
+      catClass: 'cat-prog',
       app: 'Complex relational querying, transactional aggregation, window analytical functions, and schema optimization.',
       impact: 'Queried and processed multi-million financial cardholder transaction databases; optimized query execution runtimes on enterprise data warehouses.'
     },
-    'lang-3': {
+    'prog-3': {
       number: '03',
       symbol: 'R',
       name: 'R',
-      family: 'Languages',
-      catClass: 'cat-lang',
+      family: 'Programming Languages',
+      catClass: 'cat-prog',
       app: 'Rigorous statistical inference, longitudinal panel econometrics, spatial vector mapping, and reproducible research.',
       impact: 'Created the open-source ML_for_ALL curriculum and taught applied microeconometrics, statistical inference, and spatial models at Universidad del Rosario.'
     },
-    'lang-4': {
+    'prog-4': {
       number: '04',
       symbol: 'Tex',
       name: 'LaTeX',
-      family: 'Languages',
-      catClass: 'cat-lang',
+      family: 'Programming Languages',
+      catClass: 'cat-prog',
       app: 'Technical scientific typesetting, mathematical formalisms, academic documentation, and publication-ready econometric reports.',
       impact: 'Authored mathematical research proofs, econometric working papers, and technical institutional documentation with full academic rigor.'
     },
-
-    // Category 2: General Data Analysis (13 elements)
-    'gda-1': {
+    'lang-1': {
       number: '05',
+      symbol: 'Es',
+      name: 'Spanish (Native)',
+      family: 'Languages',
+      catClass: 'cat-lang',
+      app: 'Native bilingual executive communication, C-suite presentation delivery, and stakeholder engagement in LATAM markets.',
+      impact: 'Delivered keynote graduation address at Universidad del Rosario and conducted bilingual consulting deliverables across LATAM financial entities.'
+    },
+    'lang-2': {
+      number: '06',
+      symbol: 'En',
+      name: 'English C1 (IELTS 2020)',
+      family: 'Languages',
+      catClass: 'cat-lang',
+      app: 'Full professional and academic working proficiency for international consulting, quantitative modeling, and institutional governance.',
+      impact: 'Completed dual economics undergraduate training in London at LSE; elected Student Voice Group Champion; IELTS C1 certified.'
+    },
+    'lang-3': {
+      number: '07',
+      symbol: 'Fr',
+      name: 'French (Basic)',
+      family: 'Languages',
+      catClass: 'cat-lang',
+      app: 'Fundamental working comprehension for international correspondence, multilateral collaboration, and global literacy.',
+      impact: 'Broadens cultural adaptability and foundational communication in European and multinational institutional contexts.'
+    },
+    'lang-4': {
+      number: '08',
+      symbol: 'It',
+      name: 'Italian (Basic)',
+      family: 'Languages',
+      catClass: 'cat-lang',
+      app: 'Foundational conversational and technical reading comprehension in European cultural and economic environments.',
+      impact: 'Expands cross-border linguistic versatility alongside international academic and empirical research initiatives.'
+    },
+    'gda-1': {
+      number: '09',
       symbol: 'Dg',
       name: 'Data Governance',
       family: 'General Data Analysis',
@@ -57,7 +90,7 @@
       impact: 'Designed structured governance protocols and standardized pipeline schemas ensuring auditability and compliance for institutional stakeholders.'
     },
     'gda-2': {
-      number: '06',
+      number: '10',
       symbol: 'Gdp',
       name: 'GDPR (PII Protection)',
       family: 'General Data Analysis',
@@ -66,7 +99,7 @@
       impact: 'Ensured strict GDPR compliance when engineering analytics and data features handling sensitive financial and cardholder PII.'
     },
     'gda-3': {
-      number: '07',
+      number: '11',
       symbol: 'Ci',
       name: 'Causal Inference (PSM & DiD)',
       family: 'General Data Analysis',
@@ -75,7 +108,7 @@
       impact: 'Applied Propensity Score Matching (PSM) & Difference-in-Differences (DiD) at Mastercard (+3% spend lift per iteration); implemented Callaway-Sant’Anna multi-period DiD for global academic research.'
     },
     'gda-4': {
-      number: '08',
+      number: '12',
       symbol: 'Ab',
       name: 'A/B Testing & RCTs',
       family: 'General Data Analysis',
@@ -84,7 +117,7 @@
       impact: 'Designed statistical experimentation frameworks for merchant offers and user engagement tests, driving statistically significant conversion increases.'
     },
     'gda-5': {
-      number: '09',
+      number: '13',
       symbol: 'Ecm',
       name: 'Advanced Econometrics & Impact Measurement',
       family: 'General Data Analysis',
@@ -93,7 +126,7 @@
       impact: 'Awarded Best Final Project in Applied Microeconomics (Universidad del Rosario) and 4th place nationwide in the National Academic Economics Competition (CANE).'
     },
     'gda-6': {
-      number: '10',
+      number: '14',
       symbol: 'Psm',
       name: 'Propensity Score Matching (PSM)',
       family: 'General Data Analysis',
@@ -102,7 +135,7 @@
       impact: 'Constructed logistic propensity matching algorithms at Mastercard to isolate clean baseline counterfactuals for loyalty program evaluations.'
     },
     'gda-7': {
-      number: '11',
+      number: '15',
       symbol: 'Exp',
       name: 'Experiments Design',
       family: 'General Data Analysis',
@@ -111,7 +144,7 @@
       impact: 'Architected clean experimental testbeds across commercial portfolios to validate revenue mechanics prior to broad market rollout.'
     },
     'gda-8': {
-      number: '12',
+      number: '16',
       symbol: 'Did',
       name: "Difference in Differences (Callaway & Sant'Anna)",
       family: 'General Data Analysis',
@@ -120,7 +153,7 @@
       impact: 'Applied Callaway-Sant’Anna multi-period DiD models for academic research with faculty from Princeton, Penn State, and University of Chicago.'
     },
     'gda-9': {
-      number: '13',
+      number: '17',
       symbol: 'Seq',
       name: 'Sequential Pattern Analysis (Cross-Sale)',
       family: 'General Data Analysis',
@@ -129,7 +162,7 @@
       impact: 'Identified high-conversion sequential buying pathways to recommend tailored product sequences across commercial cardholder segments.'
     },
     'gda-10': {
-      number: '14',
+      number: '18',
       symbol: 'Rfm',
       name: 'RFM Customer Models',
       family: 'General Data Analysis',
@@ -138,7 +171,7 @@
       impact: 'Designed customer segmentation and scoring based on RFM models, increasing the <strong>monetary effectiveness of loyalty programs by 23%</strong>.'
     },
     'gda-11': {
-      number: '15',
+      number: '19',
       symbol: 'Gis',
       name: 'Spatial Analysis (Shapefiles & Rasters)',
       family: 'General Data Analysis',
@@ -147,7 +180,7 @@
       impact: 'Engineered spatial analysis workflows in R analyzing regional economic disparities, public policy impacts, and territorial trends.'
     },
     'gda-12': {
-      number: '16',
+      number: '20',
       symbol: 'Ts',
       name: 'Time Series Analysis',
       family: 'General Data Analysis',
@@ -156,7 +189,7 @@
       impact: 'Projected client transactional volume and seasonal payment fluctuations to inform treasury liquidity and promotional scheduling.'
     },
     'gda-13': {
-      number: '17',
+      number: '21',
       symbol: 'Pca',
       name: 'PCA (Principal Component Analysis)',
       family: 'General Data Analysis',
@@ -164,10 +197,17 @@
       app: 'Dimensionality reduction, orthogonal factor extraction, and feature decorrelation for high-dimensional financial datasets.',
       impact: 'Synthesized multidimensional merchant behavior signals into interpretable principal components to eliminate multicollinearity in risk models.'
     },
-
-    // Category 3: Machine Learning & Data Science (9 elements)
+    'gda-14': {
+      number: '22',
+      symbol: 'Sps',
+      name: 'SPSS (Statistical Package)',
+      family: 'General Data Analysis',
+      catClass: 'cat-gda',
+      app: 'Multivariate statistical hypothesis testing, ANOVA, descriptive analytics, factor analysis, and cross-sectional survey processing.',
+      impact: 'Conducted rigorous statistical processing and survey data analysis in applied economics and empirical institutional research.'
+    },
     'mlds-1': {
-      number: '18',
+      number: '23',
       symbol: 'Mls',
       name: 'Python (Scikit-Learn, PyTorch, PySpark, TF)',
       family: 'Machine Learning & Data Science',
@@ -176,7 +216,7 @@
       impact: 'Engineered automated statistical workflows, large-scale ETL pipelines, and scalable modeling modules in production enterprise environments.'
     },
     'mlds-2': {
-      number: '19',
+      number: '24',
       symbol: 'Etl',
       name: 'ETL Pipelines',
       family: 'Machine Learning & Data Science',
@@ -185,7 +225,7 @@
       impact: 'Streamlined transactional ingestion into structured analytical feature stores, cutting manual preparation overhead significantly.'
     },
     'mlds-3': {
-      number: '20',
+      number: '25',
       symbol: 'Mla',
       name: 'Machine Learning (Clustering, Ensembles, Trees)',
       family: 'Machine Learning & Data Science',
@@ -194,7 +234,7 @@
       impact: 'Implemented K-Medoids Clustering with Gower Distance for merchant segmentation at Mastercard, generating <strong>over COP 5,000 million</strong> in annual profitability.'
     },
     'mlds-4': {
-      number: '21',
+      number: '26',
       symbol: 'Arm',
       name: 'ARM & Apriori Algorithm',
       family: 'Machine Learning & Data Science',
@@ -203,7 +243,7 @@
       impact: 'Uncovered hidden cross-selling product associations in banking cardholder transactions to optimize merchant co-marketing initiatives.'
     },
     'mlds-5': {
-      number: '22',
+      number: '27',
       symbol: 'Mcp',
       name: 'Model Context Protocol (MCP)',
       family: 'Machine Learning & Data Science',
@@ -212,7 +252,7 @@
       impact: 'Architected custom MCP tool integrations connecting enterprise models with structured financial data stores and analytical APIs.'
     },
     'mlds-6': {
-      number: '23',
+      number: '28',
       symbol: 'Agy',
       name: 'Claude Code, Codex & Antigravity',
       family: 'Machine Learning & Data Science',
@@ -221,7 +261,7 @@
       impact: 'Leveraged advanced AI coding environments to accelerate data software development, test automation, and full-stack prototyping.'
     },
     'mlds-7': {
-      number: '24',
+      number: '29',
       symbol: 'Agt',
       name: 'Skills & Multi-Agent Teams',
       family: 'Machine Learning & Data Science',
@@ -230,7 +270,7 @@
       impact: 'Built modular agent configurations with specialized roles (Data Analyst, QA, Researcher, Orchestrator) to solve complex analytical tasks.'
     },
     'mlds-8': {
-      number: '25',
+      number: '30',
       symbol: 'Prm',
       name: 'Prompt Engineering',
       family: 'Machine Learning & Data Science',
@@ -239,7 +279,7 @@
       impact: 'Engineered deterministic prompting frameworks producing structured JSON outputs for enterprise data classification and summary generation.'
     },
     'mlds-9': {
-      number: '26',
+      number: '31',
       symbol: 'Crw',
       name: 'CrewAI',
       family: 'Machine Learning & Data Science',
@@ -247,10 +287,8 @@
       app: 'Autonomous multi-agent orchestration frameworks assigning role-based tasks, memory, and tool usage to collaborate on end-to-end goals.',
       impact: 'Built collaborative multi-agent pipelines for automated market research, competitive benchmarking, and structured data synthesis.'
     },
-
-    // Category 4: Stack & Tools (18 elements)
     'tool-1': {
-      number: '27',
+      number: '32',
       symbol: 'Aws',
       name: 'AWS (Cloud Ecosystem)',
       family: 'Stack & Tools',
@@ -259,7 +297,7 @@
       impact: 'Architected cloud solutions utilizing Amazon Web Services for data processing, secure querying, and client deliverable pipelines.'
     },
     'tool-2': {
-      number: '28',
+      number: '33',
       symbol: 'Glu',
       name: 'AWS Glue',
       family: 'Stack & Tools',
@@ -268,7 +306,7 @@
       impact: 'Configured metadata crawlers and serverless ETL jobs to transform raw financial logs into optimized parquet schemas.'
     },
     'tool-3': {
-      number: '29',
+      number: '34',
       symbol: 'Wrn',
       name: 'AWS Data Wrangler',
       family: 'Stack & Tools',
@@ -277,7 +315,7 @@
       impact: 'Integrated awswrangler into statistical scripts for seamless data extraction and high-speed data lake transfers.'
     },
     'tool-4': {
-      number: '30',
+      number: '35',
       symbol: 'Stp',
       name: 'AWS Step Functions',
       family: 'Stack & Tools',
@@ -286,7 +324,7 @@
       impact: 'Designed resilient state machines coordinating data ingestion, validation checks, and ML model scoring runs.'
     },
     'tool-5': {
-      number: '31',
+      number: '36',
       symbol: 'S3',
       name: 'AWS S3 (Data Lake)',
       family: 'Stack & Tools',
@@ -295,7 +333,7 @@
       impact: 'Organized enterprise data lakes in S3 with partitioned directory layouts to minimize Athena query scan costs.'
     },
     'tool-6': {
-      number: '32',
+      number: '37',
       symbol: 'Put',
       name: 'PuTTY & WinSCP',
       family: 'Stack & Tools',
@@ -304,7 +342,7 @@
       impact: 'Administered secure remote analytics servers, automated file transfers, and managed production compute jobs via terminal.'
     },
     'tool-7': {
-      number: '33',
+      number: '38',
       symbol: 'Dbr',
       name: 'Databricks',
       family: 'Stack & Tools',
@@ -313,7 +351,7 @@
       impact: 'Executed large-scale data science notebooks and distributed transformations across multi-node Spark clusters.'
     },
     'tool-8': {
-      number: '34',
+      number: '39',
       symbol: 'Dku',
       name: 'Dataiku DSS',
       family: 'Stack & Tools',
@@ -322,7 +360,7 @@
       impact: 'Constructed end-to-end data preparation flows and production scoring recipes in client enterprise deployments.'
     },
     'tool-9': {
-      number: '35',
+      number: '40',
       symbol: 'Knm',
       name: 'KNIME Analytics',
       family: 'Stack & Tools',
@@ -331,7 +369,7 @@
       impact: 'Built automated statistical transformation nodes and data audit workflows for rapid prototyping without code sprawl.'
     },
     'tool-10': {
-      number: '36',
+      number: '41',
       symbol: 'Pbi',
       name: 'Power BI',
       family: 'Stack & Tools',
@@ -340,7 +378,7 @@
       impact: 'Developed comprehensive commercial dashboards displaying client segment KPI trajectories and campaign performance metrics.'
     },
     'tool-11': {
-      number: '37',
+      number: '42',
       symbol: 'Tab',
       name: 'Tableau',
       family: 'Stack & Tools',
@@ -349,7 +387,7 @@
       impact: 'Built executive scorecards translating machine learning segmentations into actionable visual stories for banking directors.'
     },
     'tool-12': {
-      number: '38',
+      number: '43',
       symbol: 'Spk',
       name: 'Hadoop & Apache Spark',
       family: 'Stack & Tools',
@@ -358,7 +396,7 @@
       impact: 'Processed massive transaction logs in distributed memory, reducing data aggregation times from hours to minutes.'
     },
     'tool-13': {
-      number: '39',
+      number: '44',
       symbol: 'Stl',
       name: 'Streamlit (Web Apps)',
       family: 'Stack & Tools',
@@ -367,7 +405,7 @@
       impact: 'Built interactive web applications allowing commercial stakeholders to dynamically simulate marketing budget allocations and ROI.'
     },
     'tool-14': {
-      number: '40',
+      number: '45',
       symbol: 'Vrc',
       name: 'Vercel (Deployment)',
       family: 'Stack & Tools',
@@ -376,7 +414,7 @@
       impact: 'Deployed responsive web tools and client-facing portals with instant global performance and automated version control.'
     },
     'tool-15': {
-      number: '41',
+      number: '46',
       symbol: 'Xls',
       name: 'Excel (Macros & Advanced Modeling)',
       family: 'Stack & Tools',
@@ -385,7 +423,7 @@
       impact: 'Engineered high-complexity financial models and automated reporting macros used in boardroom presentations and consulting deliverables.'
     },
     'tool-16': {
-      number: '42',
+      number: '47',
       symbol: 'Pqw',
       name: 'Power Query & Power Pivot',
       family: 'Stack & Tools',
@@ -394,7 +432,7 @@
       impact: 'Unified multi-source spreadsheets into structured data models, automating recurring monthly reporting cycles.'
     },
     'tool-17': {
-      number: '43',
+      number: '48',
       symbol: 'Ide',
       name: 'VS Code & Jupyter',
       family: 'Stack & Tools',
@@ -403,7 +441,7 @@
       impact: 'Primary daily coding environment for rapid statistical experimentation, reproducible markdown reporting, and production Python scripts.'
     },
     'tool-18': {
-      number: '44',
+      number: '49',
       symbol: 'Imp',
       name: 'Apache Impala',
       family: 'Stack & Tools',
@@ -411,10 +449,8 @@
       app: 'Low-latency massively parallel processing (MPP) SQL query engine on Apache Hadoop datasets.',
       impact: 'Conducted high-speed interactive ad-hoc analytical queries directly on petabyte-scale Hadoop data lakes without batch lag.'
     },
-
-    // Category 5: Consulting & Business (8 elements)
     'biz-1': {
-      number: '45',
+      number: '50',
       symbol: 'Cst',
       name: 'Strategic Consulting',
       family: 'Consulting & Business',
@@ -423,7 +459,7 @@
       impact: 'Advised corporate clients and financial institutions across Latin America on revenue monetization, card acceptance, and market expansion.'
     },
     'biz-2': {
-      number: '46',
+      number: '51',
       symbol: 'Exc',
       name: 'Executive Communication',
       family: 'Consulting & Business',
@@ -432,7 +468,7 @@
       impact: 'Delivered graduation speech at Universidad del Rosario; presented strategic recommendations to bank vice-presidents across LATAM.'
     },
     'biz-3': {
-      number: '47',
+      number: '52',
       symbol: 'Skm',
       name: 'Stakeholders Management',
       family: 'Consulting & Business',
@@ -441,7 +477,7 @@
       impact: 'Successfully coordinated multi-disciplinary initiatives across international banking partners, ensuring on-time adoption and buy-in.'
     },
     'biz-4': {
-      number: '48',
+      number: '53',
       symbol: 'Aig',
       name: 'AI Governance, Risk & Ethics',
       family: 'Consulting & Business',
@@ -450,7 +486,7 @@
       impact: 'Standardized ethical evaluation protocols and bias mitigations for proprietary predictive models handling consumer credit decisions.'
     },
     'biz-5': {
-      number: '49',
+      number: '54',
       symbol: 'Lss',
       name: 'Lean Six Sigma',
       family: 'Consulting & Business',
@@ -459,16 +495,16 @@
       impact: 'Applied Lean Six Sigma principles to streamline data validation procedures, cutting analytical turnaround cycles and errors.'
     },
     'biz-6': {
-      number: '50',
+      number: '55',
       symbol: 'Bdi',
-      name: 'Big Data & Business Intelligence Strategy',
+      name: 'Big Data & BI Strategy',
       family: 'Consulting & Business',
       catClass: 'cat-biz',
       app: 'Translating raw transactional data architectures into strategic enterprise decision systems and commercial competitive advantages.',
       impact: 'Formulated commercial intelligence roadmaps for acquirers and retail banking entities, directly unlocking untapped revenue streams.'
     },
     'biz-7': {
-      number: '51',
+      number: '56',
       symbol: 'Pjm',
       name: 'Project Management',
       family: 'Consulting & Business',
@@ -477,7 +513,7 @@
       impact: 'Led high-impact analytics consulting deliverables at Mastercard, delivering multi-million COP profitability within tight deadlines.'
     },
     'biz-8': {
-      number: '52',
+      number: '57',
       symbol: 'Ldr',
       name: 'Leadership & Mentorship',
       family: 'Consulting & Business',
@@ -610,32 +646,34 @@
       'Machine Learning',
       'Causal Inference',
       'SQL - MySQL',
-      'A/B Testing',
+      'SPSS Statistics',
+      'English C1 (IELTS)',
+      'A/B Testing & RCTs',
       'Advanced Econometrics',
-      'AWS Cloud',
+      'AWS Cloud Ecosystem',
       'Propensity Score Matching',
-      'Tableau',
+      'Tableau Visual Analytics',
       'Diff-in-Differences (DiD)',
       'Prompt Engineering',
-      'CrewAI',
-      'Data Governance',
-      'Power BI',
-      'Databricks',
-      'Streamlit',
+      'CrewAI Multi-Agents',
+      'Data Governance & Quality',
+      'Power BI Dashboards',
+      'Databricks Spark',
+      'Streamlit Web Apps',
       'Sub-Agent Teams',
       'PCA Analysis',
-      'Spatial Analysis',
-      'Time Series',
+      'Spatial Econometrics',
+      'Time Series Forecasting',
       'ETL Pipelines',
       'Random Forest & XGBoost',
-      'K-Medoids / Gower',
+      'K-Medoids (Gower)',
       'Model Context Protocol',
       'Executive Communication',
       'Lean Six Sigma',
       'Hadoop & Spark',
-      'Power Query & DAX',
+      'Power Query & Pivot',
       'Dataiku DSS',
-      'GDPR & PII'
+      'GDPR & PII Protection'
     ];
 
     // Strictly controlled slots: 7 visible at any one time to prevent visual clutter

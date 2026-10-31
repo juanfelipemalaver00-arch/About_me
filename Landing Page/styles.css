@@ -27,11 +27,16 @@
   --text-muted: #64748B;       /* Neutral gray for secondary annotations */
   --text-sky: #0284C7;         /* Accent sky blue text */
 
-  /* Capabilities Categories: Languages, General Data Analysis, ML & Data Science, Stack & Tools, Consulting & Business */
-  --cat-lang-color: #475569;
-  --cat-lang-bg: #F8FAFC;
-  --cat-lang-border: #CBD5E1;
-  --cat-lang-shadow: #94A3B8;
+  /* Capabilities Categories: Programming Languages, Languages, General Data Analysis, ML & Data Science, Stack & Tools, Consulting & Business */
+  --cat-prog-color: #475569;
+  --cat-prog-bg: #F8FAFC;
+  --cat-prog-border: #CBD5E1;
+  --cat-prog-shadow: #94A3B8;
+
+  --cat-lang-color: #059669;
+  --cat-lang-bg: #F0FDF4;
+  --cat-lang-border: #BBF7D0;
+  --cat-lang-shadow: #86EFAC;
 
   --cat-gda-color: #0284C7;
   --cat-gda-bg: #F0F9FF;
@@ -1015,6 +1020,7 @@ button {
   border-radius: 50%;
 }
 
+.cat-prog-bg { background-color: var(--cat-prog-color); }
 .cat-lang-bg { background-color: var(--cat-lang-color); }
 .cat-gda-bg { background-color: var(--cat-gda-color); }
 .cat-mlds-bg { background-color: var(--cat-mlds-color); }
@@ -1154,12 +1160,14 @@ button {
 }
 
 /* Category Accent Styling */
+.pt-cell.cat-prog .pt-symbol { color: var(--cat-prog-color); }
 .pt-cell.cat-lang .pt-symbol { color: var(--cat-lang-color); }
 .pt-cell.cat-gda .pt-symbol { color: var(--cat-gda-color); }
 .pt-cell.cat-mlds .pt-symbol { color: var(--cat-mlds-color); }
 .pt-cell.cat-tool .pt-symbol { color: var(--cat-tool-color); }
 .pt-cell.cat-biz .pt-symbol { color: var(--cat-biz-color); }
 
+.pt-cell.cat-prog:hover .pt-pip, .pt-cell.cat-prog.is-active .pt-pip { background-color: var(--cat-prog-color); box-shadow: 0 0 8px var(--cat-prog-color); }
 .pt-cell.cat-lang:hover .pt-pip, .pt-cell.cat-lang.is-active .pt-pip { background-color: var(--cat-lang-color); box-shadow: 0 0 8px var(--cat-lang-color); }
 .pt-cell.cat-gda:hover .pt-pip, .pt-cell.cat-gda.is-active .pt-pip { background-color: var(--cat-gda-color); box-shadow: 0 0 8px var(--cat-gda-color); }
 .pt-cell.cat-mlds:hover .pt-pip, .pt-cell.cat-mlds.is-active .pt-pip { background-color: var(--cat-mlds-color); box-shadow: 0 0 8px var(--cat-mlds-color); }
