@@ -430,7 +430,7 @@ button {
   text-align: center;
   pointer-events: none;
   padding: 1.5rem 2rem;
-  max-width: 820px;
+  max-width: 980px;
   opacity: 0;
   transform: translateY(28px);
   will-change: transform, opacity;
@@ -438,19 +438,19 @@ button {
 }
 
 .intro-name {
-  font-size: var(--font-size-title);
+  font-size: clamp(2.15rem, 6.8vw, 4.4rem);
   font-weight: 800;
   color: var(--text-dark);
-  letter-spacing: -0.03em;
-  margin-bottom: 0.65rem;
-  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin-bottom: 0.75rem;
+  line-height: 1.08;
 }
 
 .intro-thanks {
-  font-size: var(--font-size-subtitle);
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
   font-weight: 600;
   color: var(--accent-sky);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
 .intro-scroll-hint {

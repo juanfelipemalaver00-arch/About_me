@@ -105,7 +105,7 @@
       family: 'General Data Analysis',
       catClass: 'cat-gda',
       app: 'Quasi-experimental impact evaluation to isolate true incremental commercial lift from organic macroeconomic drift.',
-      impact: 'Applied Propensity Score Matching (PSM) & Difference-in-Differences (DiD) at Mastercard (+3% spend lift per iteration); implemented Callaway-Sant’Anna multi-period DiD for global academic research.'
+      impact: 'Applied Propensity Score Matching (PSM), Difference-in-Differences (DiD), and A/B testing at Mastercard (+3% spend lift per iteration over a ~21% baseline); implemented Callaway-Sant’Anna multi-period DiD for global academic research.'
     },
     'gda-4': {
       number: '12',
@@ -231,7 +231,7 @@
       family: 'Machine Learning & Data Science',
       catClass: 'cat-mlds',
       app: 'Supervised and unsupervised models utilizing Euclidean/Gower distances, ElasticNet, Random Forest, XGBoost, and LightGBM.',
-      impact: 'Implemented K-Medoids Clustering with Gower Distance for merchant segmentation at Mastercard, generating <strong>over COP 5,000 million</strong> in annual profitability.'
+      impact: 'Implemented K-Medoids Clustering with Gower Distance for merchant segmentation and custom value proposals at Mastercard, generating <strong>over 1.6M USD</strong> in annual profitability following commercial deployment.'
     },
     'mlds-4': {
       number: '26',
