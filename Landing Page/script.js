@@ -520,6 +520,69 @@
       catClass: 'cat-biz',
       app: 'Pedagogical mentoring, cross-functional team coordination, and student representation in international institutions.',
       impact: 'Awarded Best Intern of the Year 2025 at Mastercard; Global Finalist in Mastercard Innovation Challenge; Student Voice Champion at LSE.'
+    },
+    'biz-9': {
+      number: '58',
+      symbol: 'Acq',
+      name: 'Merchant Acquiring',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Diagnosing payment acceptance economics, merchant service fees (MSF), acquiring value chains, and POS/e-commerce processing rails.',
+      impact: 'Formulated acquiring strategy at Mastercard; awarded <strong>1st Place Globally</strong> in the Mastercard Global Innovation Challenge for <em>The Future of Acquiring Value Propositions</em>, modeling P&L and merchant acceptance adoption.'
+    },
+    'biz-10': {
+      number: '59',
+      symbol: 'Vpd',
+      name: 'Value Proposition Design',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Structuring client-centric value propositions, customer profile mapping (Jobs-to-be-Done, pains, gains), and quantified commercial benefit models.',
+      impact: 'Co-developed the global award-winning proposition <em>The Future of Acquiring Value Propositions</em> at Mastercard and custom merchant value propositions generating <strong>over 1.6M USD</strong> in annual profitability.'
+    },
+    'biz-11': {
+      number: '60',
+      symbol: 'Fts',
+      name: 'Fintech Strategy',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Formulating digital payment strategies, open banking synergies, API-driven financial ecosystems, and neo-banking commercial roadmaps.',
+      impact: 'Evaluated emerging fintech disruption and digital payment rails across Latin America and global markets, shaping market expansion advisory for tier-1 financial institutions.'
+    },
+    'biz-12': {
+      number: '61',
+      symbol: 'Cpa',
+      name: 'Competitive Analysis',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Benchmarking payment scheme economics, acquiring market share, competitor pricing grids, feature parity, and strategic positioning.',
+      impact: 'Delivered rigorous competitive intelligence on merchant acquiring fee structures and acquirer value offerings to differentiate Mastercard solutions against regional and global competitors.'
+    },
+    'biz-13': {
+      number: '62',
+      symbol: 'Bmi',
+      name: 'Business Model Innovation',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Re-architecting multi-sided platform unit economics, SaaS/transaction fee monetization models, and ecosystem incentive structures.',
+      impact: 'Engineered next-generation commercial monetization frameworks in Mastercard’s global innovation initiative, integrating comprehensive P&L projections and sustainable revenue mechanics.'
+    },
+    'biz-14': {
+      number: '63',
+      symbol: 'Pst',
+      name: 'Product Strategy',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Defining product vision, go-to-market (GTM) execution frameworks, MVP scoping, and metrics-driven commercial validation.',
+      impact: 'Architected end-to-end product strategy for commercial acquiring solutions at Mastercard, aligning machine learning merchant archetypes with tailored product feature suites.'
+    },
+    'biz-15': {
+      number: '64',
+      symbol: 'Sti',
+      name: 'Strategic Ideation',
+      family: 'Consulting & Business',
+      catClass: 'cat-biz',
+      app: 'Facilitating design-thinking sprints, hypothesis generation, blue-ocean strategic ideation, and rapid prototype validation.',
+      impact: 'Spearheaded the creative ideation and strategic thesis that achieved <strong>1st Place Globally</strong> in the Mastercard Global Innovation Challenge among worldwide consulting teams.'
     }
   };
 
@@ -673,7 +736,11 @@
       'Hadoop & Spark',
       'Power Query & Pivot',
       'Dataiku DSS',
-      'GDPR & PII Protection'
+      'GDPR & PII Protection',
+      'Merchant Acquiring',
+      'Value Proposition Design',
+      'Fintech Strategy',
+      'Product Strategy'
     ];
 
     // Strictly controlled slots: 7 visible at any one time to prevent visual clutter
